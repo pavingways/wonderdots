@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wonderdots.com/sitemap-index.xml
