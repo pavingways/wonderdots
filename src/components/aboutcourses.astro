@@ -1,0 +1,55 @@
+---
+import { Picture } from "astro:assets";
+import flyer1 from "assets/wonder-dots-flyer1.jpg";
+---
+
+<a id="aboutcourses" class="mb-16 block" />
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Über unsere Kurse
+  </h2>
+</div>
+
+<div class="grid gap-10 lg:grid-cols-2 place-items-top pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1">
+    <Picture
+      class="border-2 border-black rounded-xl"
+      src={flyer1}
+      alt="Flyer1"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+
+  <div>
+    <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mb-4">
+      Informatik: Spielerisch und Kreativ
+    </h2>
+    <p>
+
+      Die Inhalte unserer Kurse sind im Unterricht an Primarschulen erprobt.
+      Sie wurden ausserem auf Messen wie der tunBasel und der tunSolothurn mit hunderten Kinden im Alter von 6 bis 12 Jahren erfolgreich getestet.
+
+      In unseren Kursen benutzen wir <a href="https://ruler.game/">RULER.game</a>, eine "Schweizer Programmierumgebung die Tablets, Smartphones, und Laptops in Collaborative Computational Thinking Tools verwandelt".
+
+      Wir sind in die Entwicklung von <a href="https://ruler.game/">RULER.game</a> involviert, arbeiten so aktiv an der Erweiterung der Software und helfen so, das damit verbundene Forschungsprojekt an der FHNW weiter zu bringen.
+
+      Wir setzen auf kleine Gruppen mit maximal 10 Kindern. So bleibt genug Raum für individuelles Lernen und kreative Aktivitäten – nicht nur am Bildschirm, sondern auch abseits davon. Es geht uns nicht darum, Programmieren als Selbstzweck zu
+      lehren, sondern Kindern ein tiefes Verständnis für Computer, Informatik und digitale Zusammenhänge zu vermitteln.
+
+      Dabei entwickeln sie wichtige Strategien, die ihnen im Alltag, in der Schule und später im Leben helfen.
+
+      Zusätzlich sind wir an der Entwicklung von RULER.game beteiligt – einer innovativen Schweizer Programmierumgebung, die Tablets, Smartphones und Laptops in interaktive Werkzeuge für Collaborative Computational Thinking verwandelt. RULER.game
+      ist ein fester Bestandteil unserer Workshops, und unser Angebot wächst stetig um neue, spannende Aktivitäten.
+
+      Unsere Kurse sind eine spannende Ergänzung zum Unterricht an Schweizer Primar-, Sekundar- und Kantonsschulen. Lehrpersonen binden wir gerne aktiv ein, um gemeinsam neue Wege in der informatischen Bildung zu erkunden.
+
+      Wir sehen unsere Events als Ergänzung und Erweiterung zu dem, was im Unterricht an Schweizer Primar-, Sekundar- und Kantonsschulen vermittelt wird.
+      Gern binden wir engagierte Lehrpersonen in unsere Workshops ein.
+    </p>
+  </div>
+
+</div>

@@ -2,16 +2,18 @@
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
-import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
-import Current from "@components/current.astro";
+import Hero from "@components/hero.astro";
+import Aboutcourses from "../components/aboutcourses.astro";
+import Currentcourse from "../components/currentcourse.astro";
 ---
 
 <Layout title="">
   <Container>
     <Hero />
-    <Current />
+    <Currentcourse />
+    <Aboutcourses />
     <!--<Logos />-->
     <!--<Cta />-->
   </Container>

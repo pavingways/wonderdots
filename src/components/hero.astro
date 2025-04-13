@@ -4,56 +4,59 @@ import heroImage from "assets/wonder-dots-logo.svg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
+<main class="md:pt-12 pt-16 pb-8 md:pb-24">
+  <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter mb-16">
+    MINT Aktivitäten für Kids
+  </h1>
+  <div class="grid md:grid-cols-3 gap-8 justify-items-start place-items-top">
+    <div class="md:col-span-2">
 
-<main
-  class="grid md:grid-cols-3 gap-4 justify-items-start place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="md:col-span-2">
+      <section class="text-lg max-w-xl">
+        <p class="mt-4">
+          <strong>Wonder Dots</strong> steht für Begeisterung, Neugier und Kreativität.
+        </p>
 
-    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      MINT Aktivitäten für Kids
-    </h1>
+        <p class="mt-4">
+          Wir wollen Interesse an den <strong>MINT Fächern</strong> Mathematik, Informatik, Naturwissenschaften und Technik wecken und fördern.
+        </p>
 
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Wonder Dots führt <strong>Workshops</strong> für Kinder durch, um sie für die <strong>MINT-Themen</strong>: Mathematik, Informatik, Naturwissenschaften und Technik zu <strong>begeistern</strong>.
-    </p>
+        <p class="mt-4">
+          Unsere Kurse sind <strong>abwechslungsreich und interaktiv</strong>. In kleinen Gruppen bleibt genug Raum für <strong>kreative Aktivitäten, nicht nur am Bildschirm</strong>.
+        </p>
 
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        size="lg"
-        appearance="outline"
-        href="#current"
-        class="flex gap-1 items-center justify-center">
-        <Icon class="text-black w-4 h-4" name="bx:calendar" />
-        Aktuelle Aktivitäten
-      </Link>
+        <p class="mt-4">
+          Hast Du Lust, mit uns die digitale Welt zu entdecken? <br>
+          Dann checke unsere aktuellen Aktivitäten und melde Dich an!
+        </p>
+
+        <p class="mt-6 flex flex-col sm:flex-row gap-3">
+          <Link
+            size="lg"
+            appearance="outline"
+            href="#current"
+            class="flex gap-1 items-center justify-center">
+            <Icon class="text-black w-4 h-4" name="bx:calendar" />
+            Aktuelle Aktivität
+          </Link>
+        </p>
+
+        <p class="mt-4">
+          Wir freuen uns auf neugierige Köpfe und inspirierende Events!
+        </p>
+
+      </section>
     </div>
 
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Wir sehen unsere Events als Ergänzung und Erweiterung zu dem, was im Unterricht an Schweizer Primar-, Sekundar- und Kantonsschulen vermittelt wird.
-      Gern binden wir engagierte Lehrpersonen in unsere Workshops ein.
-    </p>
-
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Wir sind in die Entwicklung von <a href="https://ruler.game/">RULER.game</a> involviert - Eine Schweizer Programmierumgebung die Tablets, Smartphones, und Laptops in Collaborative Computational Thinking Tools verwandelt.
-    </p>
-
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Wir benutzen <a href="https://ruler.game/">RULER.game</a> in unseren Workshops, bieten in Zukunft aber auch weitere Aktivitäten an.
-    </p>
-
-
+    <div class="py-6 hidden md:block pr-8">
+      <Picture
+        src={heroImage}
+        alt="Wonder Dots Logo"
+        widths={[50]}
+        sizes="(max-width: 640px) 50px, 100px"
+        loading="eager"
+        format="avif"
+      />
+    </div>
   </div>
-
-  <div class="py-6 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Wonder Dots Logo"
-      widths={[50]}
-      sizes="50px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
-
 
 </main>
