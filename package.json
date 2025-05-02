@@ -1,5 +1,5 @@
 {
-  "name": "wonderdots",
+  "name": "wonderdots.ch",
   "type": "module",
   "version": "2.2.0",
   "private": true,
@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "deploy-dev": "bin/deploy-dev.sh",
+    "deploy-prod": "bin/deploy-prod.sh",
     "astro": "astro"
   },
   "dependencies": {
