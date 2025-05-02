@@ -6,7 +6,7 @@ This Free Template is sponsored by [Web3Templates](https://web3templates.com)
 
 ## Live Demo
 
-**[https://wonderdots.com/](https://wonderdots.com/)**
+**[https://www.wonderdots.ch/](https://www.wonderdots.ch/)**
 
 **[Download Wonder Dots Template](https://web3templates.com/templates/wonderdots-starter-website-template-for-astro)**
 
@@ -37,7 +37,7 @@ This Free Template is sponsored by [Web3Templates](https://web3templates.com)
 | License         | GPL-2.0 | Commercial |
 | &nbsp; | &nbsp;| &nbsp;|
 | Pricing| Free|**$49**|
-| &nbsp; | [Deploy for free](https://vercel.com/new/surjithctly/clone?demo-description=Starter%20template%20for%20startups%2C%20marketing%20websites%20%26%20blogs%20built%20with%20Astro%20and%20TailwindCSS.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F5dB0dDqBr1BfvIoNOmffVB%2F784984a8d3fe5e3db123e7c655166046%2Fwonderdots_-_Tony_Sullivan.jpg&demo-title=Wonder Dots&demo-url=https%3A%2F%2Fwonderdots.com%2F&from=templates&project-name=Wonder Dots&repository-name=wonderdots&repository-url=https%3A%2F%2Fgithub.com%2Fsurjithctly%2Fwonderdots&skippable-integrations=1) | [Purchase Pro](https://web3templates.com/templates/wonderdots-pro-astro-saas-website-template) |
+| &nbsp; | [Deploy for free](https://vercel.com/new/surjithctly/clone?demo-description=Starter%20template%20for%20startups%2C%20marketing%20websites%20%26%20blogs%20built%20with%20Astro%20and%20TailwindCSS.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F5dB0dDqBr1BfvIoNOmffVB%2F784984a8d3fe5e3db123e7c655166046%2Fwonderdots_-_Tony_Sullivan.jpg&demo-title=Wonder Dots&demo-url=https%3A%2F%2Fwonderdots.ch%2F&from=templates&project-name=Wonder Dots&repository-name=wonderdots&repository-url=https%3A%2F%2Fgithub.com%2Fsurjithctly%2Fwonderdots&skippable-integrations=1) | [Purchase Pro](https://web3templates.com/templates/wonderdots-pro-astro-saas-website-template) |
 
 <a href="https://web3templates.com/templates/wonderdots-pro-astro-saas-website-template">
 <img width="160" alt="Upgrade to Pro" src="https://user-images.githubusercontent.com/1884712/199181300-37c2128e-d033-4145-a906-16fa5263a53b.png">
@@ -49,7 +49,7 @@ You can instantly clone this to your GitHub and deploy the site by clicking the 
 
 Click here to deploy on Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsurjithctly%2Fwonderdots&project-name=wonderdots&repository-name=wonderdots&demo-title=Wonder Dots%20-%20Astro%20Starter%20Template&demo-description=Wonder Dots%20is%20a%20starter%20template%20for%20startups%2C%20marketing%20websites%20%26%20landing%20pages.%20Built%20with%20Astro%2C%20TailwindCSS&demo-url=https%3A%2F%2Fwonderdots.com%2F&demo-image=https%3A%2F%2Fuser-images.githubusercontent.com%2F1884712%2F200831799-10ef2456-a02e-4068-b580-4b5326f0b33b.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsurjithctly%2Fwonderdots&project-name=wonderdots&repository-name=wonderdots&demo-title=Wonder Dots%20-%20Astro%20Starter%20Template&demo-description=Wonder Dots%20is%20a%20starter%20template%20for%20startups%2C%20marketing%20websites%20%26%20landing%20pages.%20Built%20with%20Astro%2C%20TailwindCSS&demo-url=https%3A%2F%2Fwonderdots.ch%2F&demo-image=https%3A%2F%2Fuser-images.githubusercontent.com%2F1884712%2F200831799-10ef2456-a02e-4068-b580-4b5326f0b33b.png)
 
 Click here to deploy on Netlify:
 
@@ -67,7 +67,7 @@ Click here to deploy on Netlify:
 
 ### Pagespeed Score
 
-[![pagespeed](https://user-images.githubusercontent.com/1884712/210250214-7aa98167-7993-4b90-8138-326b8fa0c223.png)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fwonderdots.com%2F)
+[![pagespeed](https://user-images.githubusercontent.com/1884712/210250214-7aa98167-7993-4b90-8138-326b8fa0c223.png)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fwonderdots.ch%2F)
 
 
 ## Installation

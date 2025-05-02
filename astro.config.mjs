@@ -6,6 +6,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://wonderdots.com",
+  site: "https://www.wonderdots.ch",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
 });
