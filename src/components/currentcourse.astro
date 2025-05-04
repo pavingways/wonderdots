@@ -1,65 +1,86 @@
 ---
 import { Picture } from "astro:assets";
-import flyer1 from "assets/Wonder-Dots-Flyer-1.png";
+import flyer1 from "assets/activities/ruler-pacman/wonder-dots-ruler-pacman.png";
+import Link from "./ui/link.astro";
 ---
+<a id="current" class="block" />
 
-<a id="current" class="mb-16 block" />
-
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Aktuelle Aktivität
-  </h2>
-</div>
-
-<div class="grid gap-10 lg:grid-cols-2 place-items-top pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1">
-    <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mb-4">Wir kreieren ein Videogame!</h2>
-    <p class="mt-4">
-      In einem 3-stündigen Workshop entwickeln Kinder ihr eigenes Videospiel.
-      Mit RULER.game ist das ganz einfach und schon ab 8 Jahren möglich.
-    </p>
-    <p class="mt-4">
-      <strong>In diesem Kurs lernen wir keine Programmiersprache,</strong>
-      aber wir werden kreativ und lernen die Grundlagen der Programmierung spielerisch kennen!
-    </p>
-    <p class="mt-4">
-      Kennst Du das Spiel Pacman? Wenn nicht - kein Problem - Fangies kennst Du bestimmt.
-    </p>
-    <p class="mt-4">
-      Wir starten damit, unsere Spielfiguren zu gestalten - und zwar ganz old-school mit Stiften und Papier.
-      Wenn Deine Charaktere fertig sind, fotografieren wir sie und bringen sie auf unsere Bildschirme.
-    </p>
-    <p class="mt-4">
-      Jetzt geht es mit der Informatik los: mit <strong>einfachen Wenn-Dann Regeln</strong> programmierst du Pacman so, dass du ihn mit dem Steuerkreuz bewegen kannst.
-      Dann geht es mit den Geistern weiter: sie sollen Pacman jagen - aber wie programmiert man so etwas?
-    </p>
-    <p class="mt-4">
-      Zusammen versuchen wir, verschiedene Lösungen zu finden und du lernst dabei nicht nur die Grundlagen der Programmierung kennen, sondern auch, wie ein Computer und sogar künstliche Intelligenz funktioniert.
-    </p>
-    <p class="mt-4">
-      Mit diesem Wissen können wir unser Game dann noch verbessern - vielleicht lassen wir Pacman noch Bonbons fressen oder wir bauen ein ganz kompliziertes Labyrinth?
-      Wie wäre es mit einer Punkteanzeige oder noch weiteren Gegnern, die den Geistern helfen? Du willst zu zweit spielen? Wir überlegen, wie man das machen kann und probieren es aus!
-    </p>
-    <p class="mt-4">
-      Wenn Dein Game nicht fertig wird, ist das kein Problem: Du kannst es zu Hause weiterbauen! Wir speichern Dein Spiel und du bekommst einen QR-Code. Mit dem Kannst Du Dein Spiel auf jedem Gerät weiterbauen, das einen Webbrowser hat.
-      Du kannst es auch mit Deiner Familie und Freunden teilen und sie bitten, Dein Spiel zu testen ;)
-    </p>
-    <p class="mt-4">
-      Der Workshop ist für Kinder im Alter von 7 bis 12 Jahren geeignet.
-    </p>
-    <p class="mt-4">
-      Bringt bitte ein Tablet oder Smartphone mit! Falls Ihr keines zur Verfügung habt, können wir Euch auch aber auch mit einem Gerät aushelfen.
-    </p>
+<section class="mt-44 max-w-screen-xl mx-auto">
+  <!-- bubbles -->
+  <div class="absolute -z-10">
+    <div class="absolute w-64 h-64 bg-emerald-200 rounded-full -top-10 -left-12"></div>
+    <div class="absolute w-72 h-72 bg-emerald-200 rounded-full -top-14 left-32"></div>
+    <div class="absolute w-48 h-48 bg-emerald-200 rounded-full -top-16 left-72"></div>
+    <div class="absolute w-96 h-96 bg-emerald-200 rounded-full -top-8 left-80"></div>
+    <div class="absolute w-36 h-36 bg-emerald-200 rounded-full -top-10 left-[calc(540px)]"></div>
+    <div class="absolute w-64 h-64 bg-emerald-200 rounded-full -top-20 left-[calc(640px)]"></div>
+    <div class="absolute w-96 h-96 bg-emerald-200 rounded-full -top-12 left-[calc(740px)]"></div>
   </div>
-  <div>
-    <Picture
-      class="border-2 border-black rounded-xl"
-      src={flyer1}
-      alt="Flyer1"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
+
+
+  <!-- content -->
+  <div class="bg-emerald-200 px-20 pt-8 pb-16 rounded-2xl">
+  <div class="mt-16 md:mt-0">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Aktuelle Aktivität
+    </h2>
   </div>
-</div>
+
+  <div class="grid gap-10 lg:grid-cols-2 place-items-top pt-16 pb-8 md:pt-12 md:pb-24">
+    <div class="py-6 md:order-1">
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mb-4">Wir kreieren ein Videogame</h2>
+      <p class="mt-4">
+        <strong>... und das schon in der Primarstufe!</strong>
+        Es ist ganz einfach, mit RULER.game ein eigenes Game zu entwickeln.
+      </p>
+      <p class="mt-4">
+        <strong>In diesem Workshop lernen wir keine Programmiersprache,</strong>
+        aber wir werden kreativ und lernen die Grundlagen der Programmierung und der Informatik auf spielerische und kreative Art kennen!
+      </p>
+      <p class="mt-4">
+        Kennst Du das Spiel Pacman? Wenn nicht - kein Problem - Fangies kennst Du bestimmt.
+      </p>
+      <p class="mt-4">
+        Wir starten damit, unsere Spielfiguren zu gestalten - und zwar ganz old-school mit Stiften und Papier.
+        Wenn Deine Charaktere fertig sind, fotografieren wir sie und bringen sie auf unsere Bildschirme.
+      </p>
+      <p class="mt-4">
+        Jetzt geht es mit der Informatik los: mit <strong>einfachen Wenn-Dann Regeln</strong> sagen wir Pacman, dass er sich mit dem Steuerkreuz bewegen lassen soll.
+        Dann geht es mit den Geistern weiter: sie sollen Pacman jagen - aber wie geht das?
+      </p>
+      <p class="mt-4">
+        Zusammen versuchen wir, verschiedene Lösungen zu finden und du lernst dabei nicht nur die Grundlagen der Programmierung kennen, sondern auch, wie ein Computer und sogar künstliche Intelligenz funktioniert.
+      </p>
+      <p class="mt-4">
+        Mit diesem Wissen können wir unser Game dann noch verbessern - vielleicht lassen wir Pacman noch Bonbons fressen oder wir bauen ein ganz kompliziertes Labyrinth?
+        Wie wäre es mit einer Punkteanzeige oder noch weiteren Gegnern, die den Geistern helfen? Du willst zu zweit spielen? Wir überlegen, wie man das machen kann und probieren es aus!
+      </p>
+      <p class="mt-4">
+        Wenn Dein Game nicht fertig wird, ist das kein Problem: Du kannst es zu Hause weiterbauen! Wir speichern Dein Spiel und du bekommst einen QR-Code. Mit dem Kannst Du Dein Spiel auf jedem Gerät weiterbauen, das einen Webbrowser hat.
+        Du kannst es auch mit Deiner Familie und Freunden teilen und sie bitten, Dein Spiel zu testen ;)
+      </p>
+      <p class="mt-4">
+        Der Workshop ist für Kinder im Alter von 7 bis 12 Jahren geeignet.
+      </p>
+      <p class="mt-4">
+        Wenn ihr könnt, bringt bitte ein Tablet oder Smartphone mit! Falls Ihr keines zur Verfügung habt, können wir Euch auch aber auch mit einem Gerät aushelfen.
+      </p>
+    </div>
+    <div>
+
+      <Link href="/public/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+        <Picture
+          class="border-2 border-black rounded-xl"
+          src={flyer1}
+          alt="Flyer1"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+        />
+      </Link>
+    </div>
+  </div>
+
+  </div>
+</section>

@@ -3,60 +3,71 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/wonder-dots-logo.svg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
+import Container from "./container.astro";
 ---
-<main class="pt-32 pb-24">
-  <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter mb-8">
-    MINT Aktivitäten für Kids
-  </h1>
-  <div class="grid md:grid-cols-3 gap-8 justify-items-start place-items-top">
-    <div class="md:col-span-2">
-
-      <section class="text-lg max-w-xl">
-        <p class="mt-4">
-          <strong>Wonder Dots</strong> steht für Begeisterung, Neugier und Kreativität.
-        </p>
-
-        <p class="mt-4">
-          Wir wollen Interesse an <strong>MINT Fächern</strong> Mathematik, Informatik, Naturwissenschaften und Technik wecken und vor allem die <strong>Informatische Bildung</strong> fördern.
-        </p>
-
-        <p class="mt-4">
-          Unsere Kurse sind <strong>abwechslungsreich und interaktiv</strong>. In kleinen Gruppen bleibt genug Raum für <strong>kreative Aktivitäten, nicht nur am Bildschirm</strong>.
-        </p>
-
-        <p class="mt-4">
-          Hast Du Lust, mit uns die digitale Welt zu entdecken? <br>
-          Dann checke unsere aktuellen Aktivitäten und melde Dich an!
-        </p>
-
-        <p class="mt-6 flex flex-col sm:flex-row gap-3">
-          <Link
-            size="lg"
-            appearance="outline"
-            href="#current"
-            class="flex gap-1 items-center justify-center">
-            <Icon class="text-black w-4 h-4" name="bx:calendar" />
-            Aktuelle Aktivität
-          </Link>
-        </p>
-
-        <p class="mt-4">
-          Wir freuen uns auf neugierige Köpfe und inspirierende Events!
-        </p>
-
-      </section>
-    </div>
-
-    <div class="py-6 hidden md:block pr-8">
-      <Picture
-        src={heroImage}
-        alt="Wonder Dots Logo"
-        widths={[50]}
-        sizes="(max-width: 640px) 50px, 100px"
-        loading="eager"
-        format="avif"
-      />
-    </div>
+<main class="mt-44 max-w-screen-xl mx-auto">
+  <!-- bubbles -->
+  <div class="absolute -z-10">
+    <div class="absolute w-64 h-64 bg-white rounded-full -top-20 -left-8" />
+    <div class="absolute w-52 h-52 bg-white rounded-full -top-12 left-40" />
+    <div class="absolute w-40 h-40 bg-white rounded-full -top-24 left-80" />
+    <div class="absolute w-96 h-96 bg-white rounded-full -top-24 left-[calc(430px)]" />
   </div>
 
+  <!-- content -->
+  <div class="bg-white px-20 pt-8 pb-16 rounded-3xl">
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter mb-8">
+      MINT Aktivitäten für Kids
+    </h1>
+    <div class="grid md:grid-cols-3 gap-8 justify-items-start place-items-top">
+      <div class="md:col-span-2">
+
+        <section class="text-lg max-w-xl">
+          <p class="mt-4">
+            <strong>Wonder Dots</strong> steht für Begeisterung, Neugier und Kreativität.
+          </p>
+
+          <p class="mt-4">
+            Wir wollen Interesse an <strong>MINT Fächern</strong> Mathematik, Informatik, Naturwissenschaften und Technik wecken und vor allem die <strong>Informatische Bildung</strong> fördern.
+          </p>
+
+          <p class="mt-4">
+            Unsere Kurse sind <strong>abwechslungsreich</strong> und <strong>interaktiv</strong>. In kleinen Gruppen bleibt genug Raum für <strong>kreative Aktivitäten</strong>, nicht nur am Bildschirm.
+          </p>
+
+          <p class="mt-4">
+            Hast Du Lust, mit uns die digitale Welt zu entdecken? <br>
+            Dann checke unsere aktuellen Aktivitäten und melde Dich an!
+          </p>
+
+          <p class="mt-6 flex flex-col sm:flex-row gap-3">
+            <Link
+              size="lg"
+              appearance="outline"
+              href="#current"
+              class="flex gap-1 items-center justify-center">
+              <Icon class="text-black w-4 h-4" name="bx:calendar" />
+              Aktuelle Aktivität
+            </Link>
+          </p>
+
+          <p class="mt-4">
+            Wir freuen uns auf neugierige Köpfe und inspirierende Events!
+          </p>
+
+        </section>
+      </div>
+
+      <div class="py-6 hidden md:block pr-8">
+        <Picture
+          src={heroImage}
+          alt="Wonder Dots Logo"
+          widths={[50]}
+          sizes="(max-width: 640px) 50px, 100px"
+          loading="eager"
+          format="avif"
+        />
+      </div>
+    </div>
+  </div>
 </main>
