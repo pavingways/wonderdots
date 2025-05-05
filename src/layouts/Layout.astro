@@ -6,7 +6,6 @@ import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
 
 
-
 export interface Props {
   title: string;
 }
@@ -21,8 +20,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Wonder Dots"
-  : "Wonder Dots - Starter Template for Astro with Tailwind CSS";
+  ? title + " | Wonder Dots"
+  : "Wonder Dots - Informatik und MINT Aktivitäten für Kids";
 ---
 
 <!DOCTYPE html>
@@ -36,36 +35,29 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Wonder Dots is a starter website template for Astro built with TailwindCSS."
+      description="Wonder Dots - Informatik und MINT Aktivitäten für Kids"
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Wonder Dots - Starter Template for Astro`,
+          title: `Wonder Dots - Informatik und MINT Aktivitäten für Kids`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Wonder Dots Homepage Screenshot",
+          alt: "Wonder Dots Screenshot",
         },
       }}
     />
   </head>
   <body class="relative bg-blue-100">
     <!-- blue bubbles -->
-    <div class="absolute inset-0 -z-10 max-w-screen-xl mx-auto">
-      <div class="relative">
-        <div class="absolute w-48 h-48 bg-blue-200 opacity-80 rounded-full left-5 -top-2"></div>
-        <div class="absolute w-28 h-28 bg-blue-300 opacity-60 rounded-full left-40 top-12"></div>
+    <div class="relative inset-0 -z-10 max-w-screen-xl mx-auto">
+        <div class="absolute w-48 h-48 bg-blue-200 opacity-80 rounded-full -left-1 -top-2"></div>
+        <div class="absolute w-28 h-28 bg-blue-300 opacity-60 rounded-full left-36 top-16"></div>
         <div class="absolute w-28 h-28 bg-blue-300 opacity-20 rounded-full top-24 right-1/3"></div>
-        <div class="absolute w-36 h-36 bg-blue-400 opacity-30 rounded-full top-1 right-1/3"></div>
+        <div class="absolute w-36 h-36 bg-blue-400 opacity-30 rounded-full top-6 right-1/3"></div>
         <div class="absolute w-48 h-48 bg-blue-600 opacity-40 rounded-full top-12 right-80"></div>
-      </div>
     </div>
 
   <Navbar />
