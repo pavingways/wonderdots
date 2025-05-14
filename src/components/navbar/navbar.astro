@@ -46,13 +46,14 @@ const menuitems = [
           Wonder <span class="text-slate-500">Dots</span>
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-8 h-8 text-gray-800" />
+          <MenuIcon class="mt-2 w-8 h-8 text-black" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
+              <!--
               <>
                 {item.children && (
                   <Dropdown
@@ -61,7 +62,9 @@ const menuitems = [
                     lastItem={index === menuitems.length - 1}
                   />
                 )}
-
+             </>
+             -->
+             <>
                 {!item.children && (
                   <li>
                     <a
@@ -69,17 +72,16 @@ const menuitems = [
                       class="flex lg:px-3 py-2 text-2xl lg:text-xl text-gray-600 hover:text-gray-900">
                       <span> {item.title}</span>
 
-                      <!--{item.badge && (-->
-                      <!--  <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">-->
-                      <!--    New-->
-                      <!--  </span>-->
-                      <!--)}-->
+                      {item.badge && (
+                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
+                          New
+                        </span>
+                      )}
 
                     </a>
                   </li>
                 )}
-
-              </>
+             </>
             ))
           }
         </ul>

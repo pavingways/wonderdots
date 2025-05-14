@@ -58,14 +58,13 @@ import Container from "./container.astro";
         </section>
       </div>
 
-      <div class="md:col-span-2 pr-8">
+      <div class="md:col-span-2 md:mt-8">
         <Picture
           src={heroImage}
           alt="Wonder Dots Logo"
-          widths={[50]}
-          sizes="(max-width: 640px) 50px, 100px"
           loading="eager"
-          format="avif"
+          formats={['svg']}
+          class="mx-auto"
         />
       </div>
     </div>
