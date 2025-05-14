@@ -60,17 +60,22 @@ const makeTitle = title
         <div class="absolute w-48 h-48 bg-blue-600 opacity-40 rounded-full top-12 right-80"></div>
     </div>
 
-  <Navbar />
+    <Navbar />
+
     <slot />
+
     <Footer />
+
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
       }
+      a[rel~="nofollow"] {
+          border-bottom: 1px solid grey;
+      }
     </style>
-
 
   </body>
 </html>

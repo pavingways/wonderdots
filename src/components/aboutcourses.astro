@@ -1,43 +1,68 @@
 ---
 import { Picture } from "astro:assets";
+import Link from "./ui/link.astro";
 ---
 
 <a id="aboutcourses" class="mb-16 block" />
 
-<div class="px-5">
-  <h2 class="mt-16 mb-4 text-4xl lg:text-5xl font-bold lg:tracking-tight">
+<div class="flex flex-col gap-6 mx-auto mt-16">
+  <h2 class="mt-4 mb-4 text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Über unsere Kurse
   </h2>
 
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mb-4">
-    Informatik: Spielerisch und Kreativ
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Informatik: Kreativ. Spielerisch. Verständlich.
   </h3>
-  <p class="mt-4">
-    Die Inhalte unserer Kurse sind im Unterricht an Primarschulen erprobt.
-    Sie wurden ausserem auf Messen wie der <a href="https://tunbasel.ch/">tunBasel</a> und der <a href="https://tunsolothurn.ch/">tunSolothurn</a> mit hunderten Kinden im Alter von 6 bis 14 Jahren erfolgreich getestet.
+  <p>
+    Unsere Kurse sind anders als herkömmliche Programmierkurse:
+    Sie vermitteln nicht nur Code, sondern fördern Computational Thinking – das logische,
+    strukturierte und kreative Denken, das hinter jeder digitalen Lösung steckt.
   </p>
-  <p class="mt-4">
-    In unseren Kursen benutzen wir <a href="https://ruler.game/">RULER.game</a>, eine "Schweizer Programmierumgebung die Tablets, Smartphones, und Laptops in Collaborative Computational Thinking Tools verwandelt".
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Erprobt & bewährt
+  </h3>
+  <p>
+    Unsere Inhalte wurden im Schulunterricht und auf Veranstaltungen wie der
+    <a href="https://tunbasel.ch/" rel="nofollow noopener">tunBasel</a>
+    und der <a href="https://tunsolothurn.ch/" rel="nofollow noopener">tunSolothurn</a>
+    mit Hunderten von Kinden im Alter von 6 bis 14 Jahren erfolgreich getestet.
   </p>
-  <p class="mt-4">
-    Wir sind in die Entwicklung von <a href="https://ruler.game/">RULER.game</a> involviert, arbeiten so aktiv an der Erweiterung der Software und helfen so, das damit verbundene Forschungsprojekt an der FHNW weiter zu bringen.
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Einzigartiges Werkzeug: RULER.game
+  </h3>
+  <p>
+    Wir arbeiten eng mit der Fachhochschule Nordwestschweiz (FHNW) zusammen und
+    sind aktiv an der Weiterentwicklung von RULER.game beteiligt – einer innovativen
+    Schweizer Lernumgebung, die Tablets, Smartphones und Laptops in Tools für
+    kollaboratives informatisches Denken verwandelt.
+    RULER.game ist zentraler Bestandteil unserer Kurse und wird laufend um neue
+    Funktionen erweitert.
   </p>
-  <p class="mt-4">
-    Wir setzen auf kleine Gruppen mit maximal 10 Kindern. So bleibt genug Raum für individuelles Lernen und kreative Aktivitäten – nicht nur am Bildschirm, sondern auch abseits davon. Es geht uns nicht darum, Programmieren als Selbstzweck zu
-    lehren, sondern Kindern ein tiefes Verständnis für Computer, Informatik und digitale Zusammenhänge zu vermitteln.
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Lernen mit Kopf, Herz und Hand
+  </h3>
+  <p>
+    Unsere Workshops finden in kleinen Gruppen mit maximal 10 Kindern statt. Das
+    schafft Raum für individuelles Lernen, Teamarbeit und kreative Entfaltung – sowohl
+    am Bildschirm als auch darüber hinaus.
   </p>
-  <p class="mt-4">
-    Dabei entwickeln sie wichtige Strategien, die ihnen im Alltag, in der Schule und später im Leben helfen.
+  <p>
+    Wir vermitteln dabei:
   </p>
-  <p class="mt-4">
-    Zusätzlich sind wir an der Entwicklung von RULER.game beteiligt – einer innovativen Schweizer Programmierumgebung, die Tablets, Smartphones und Laptops in interaktive Werkzeuge für Collaborative Computational Thinking verwandelt. RULER.game
-    ist ein fester Bestandteil unserer Workshops, und unser Angebot wächst stetig um neue, spannende Aktivitäten.
+    <ul class="list-disc list-inside">
+      <li>ein grundlegendes Verständnis für digitale Systeme,</li>
+      <li>wie Computer „denken“ und Entscheidungen treffen,</li>
+      <li>kreative Problemlösestrategien mit nachhaltigem Nutzen für Schule und Alltag.</li>
+    </ul>
+
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Ergänzung zum Schulunterricht
+  </h3>
+  <p>
+    Unsere Angebote erweitern und vertiefen, was im regulären Primarschul-Unterricht
+    behandelt wird.
+    <strong>Lehrpersonen</strong> binden wir gerne aktiv in unsere Workshops ein, um gemeinsam neue
+    Wege in der informatischen Bildung zu beschreiten. Unsere Aktivitäten sind bestens dafür geeignet, direkt in der Schule durchgeführt zu werden.
   </p>
-  <p class="mt-4">
-    Unsere Kurse sind eine spannende Ergänzung zum Unterricht an Schweizer Primar-, Sekundar- und Kantonsschulen. Lehrpersonen binden wir gerne aktiv ein, um gemeinsam neue Wege in der informatischen Bildung zu erkunden.
-  </p>
-  <p class="mt-4">
-    Wir sehen unsere Events als Ergänzung und Erweiterung zu dem, was im Unterricht an Schweizer Primar-, Sekundar- und Kantonsschulen vermittelt wird.
-    Gern binden wir engagierte Lehrpersonen in unsere Workshops ein.
-  </p>
+
 </div>

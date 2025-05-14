@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Activity1 from "@components/activities/1-programming-for-primary-kids.astro";
+import { Icon } from "astro-icon/components";
+import Link from "../../components/ui/link.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="MINT Workshop 1 - Primarschüler Informatik: Wir kreieren ein Videogame">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Workshop: Wir kreieren ein Videogame!</Fragment>
+      <Fragment slot="desc">
+        Ein eigenes Game entwickeln – und das schon in der Primarschule? <br />
+        Mit RULER.game wird das kinderleicht!
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Inhalt
+      </h2>
+      <p class="text-lg text-slate-500">
+        In diesem Workshop gestalten Kinder im Alter von 7–12 Jahren ihre eigenen Spielfiguren
+        – zuerst ganz klassisch mit Stift und Papier. Diese werden dann anschliessend
+        digitalisiert und in ein eigenes kleines Spiel integriert.
+        Dabei geht es nicht ums Programmieren im klassischen Sinn, sondern um das
+        spielerische Verstehen von Logik, Regeln und Abläufen im Computer – also um das,
+        was hinter jeder guten Software steckt: Computational Thinking.
+        Die Kinder lernen:
+        • einfache Wenn-Dann-Regeln (z. B. „Bewege dich mit dem Steuerkreuz“),
+        • wie Gegner im Spiel „denken“ (z. B. Geister, die jagen),
+        • wie man Punkte zählt, Spielmechaniken aufbaut und kreative Level entwickelt,
+        • erste Konzepte von künstlicher Intelligenz.
+        Ob Punkteanzeige, Mehrspielermodus oder verrückte Labyrinthe – alles ist möglich!
+        Und wenn das Game noch nicht fertig ist? Kein Problem: Mit einem QR-Code kann es
+        jederzeit zu Hause weiterentwickelt und mit Freunden getestet werden.
+
+      </p>
+      <h2 class="font-bold text-3xl text-gray-800">
+        Hinweise
+      </h2>
+      <p class="text-lg text-slate-500">
+        Bitte bringt ein Tablet oder Smartphone mit. Leihgeräte sind bei Bedarf auch
+        vorhanden.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">
+        Details und Anmeldung
+      </h2>
+
+      <Activity1 />
+
+      <Link
+        size="lg"
+        appearance="activity"
+        href="/mint-activities/1-programming-for-primary-kids"
+        class="flex gap-2 items-center justify-center mt-4 bg-white text-xl">
+        <Icon class="text-black w-4 h-4" name="bx:info-circle" />
+        Jetzt anmelden
+      </Link>
+    </div>
+
+  </Container>
+</Layout>
