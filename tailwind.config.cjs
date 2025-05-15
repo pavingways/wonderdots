@@ -12,6 +12,12 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
       },
+      screens: {
+        'xs': '480px',    // Extra small devices
+        ...defaultTheme.screens, // Preserves the default breakpoints
+        '4xl': '1920px',  // Extra large breakpoint
+      },
+
     },
   },
   plugins: [require("@tailwindcss/typography")],
