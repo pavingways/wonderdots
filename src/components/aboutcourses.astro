@@ -1,10 +1,25 @@
 ---
-import { Picture } from "astro:assets";
-import Link from "./ui/link.astro";
-import { Icon } from "astro-icon/components";
-import img1 from "../assets/sliders/aboutcourses/IMG_1418.jpg";
-import img2 from "../assets/sliders/aboutcourses/IMG_1727.jpg";
-import img3 from "../assets/sliders/aboutcourses/IMG_6879.jpg";
+import { Carousel } from "astro-carousel";
+import Image from "astro/components/Image.astro";
+import Picture from "astro/components/Picture.astro";
+const images = [
+  {
+    src: "https://a.storyblok.com/f/95455/1350x1080/3ef7748922/p5240368.jpg",
+    alt: "",
+    format: "webp",
+    width: 1350,
+    height: 1080,
+    widths: [450, 675, 1350]
+  },
+  {
+    src: "https://camo.githubusercontent.com/4afee3553d42f737af01b3f99f30a4f8835c56bf8af97cc1747771c3a0fddf12/68747470733a2f2f612e73746f7279626c6f6b2e636f6d2f662f39353435352f3235363078313630302f386264633636643765612f73637265656e73686f742d323032342d30342d32362d61742d31332d34322d30322e706e672f6d2f313238307830",
+    alt: "",
+    format: "webp",
+    width: 1350,
+    height: 1080,
+    widths: [450, 675, 1350]
+  }
+];
 ---
 
 <a id="aboutcourses" class="mb-16 block" />
@@ -23,10 +38,6 @@ import img3 from "../assets/sliders/aboutcourses/IMG_6879.jpg";
     strukturierte und kreative Denken, das hinter jeder Programmier-Lösung steckt.
   </p>
 
-
-  <!-- insert carousel here -->
-
-
   <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
     Erprobt & bewährt
   </h3>
@@ -37,45 +48,72 @@ import img3 from "../assets/sliders/aboutcourses/IMG_6879.jpg";
     sowie bei Events im <a href="https://www.verkehrshaus.ch/" rel="nofollow noopener">Verkehrshaus der Schweiz</a>
     in Luzern mit Hunderten von Kinden im Alter von 6 bis 14 Jahren erfolgreich getestet.
   </p>
-  
-  
-  
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-    Einzigartiges Werkzeug: RULER.game
-  </h3>
-  <p>
-    Wir arbeiten eng mit der Fachhochschule Nordwestschweiz (FHNW) zusammen und
-    sind aktiv an der Weiterentwicklung von RULER.game beteiligt – einer innovativen
-    Schweizer Lernumgebung, die Tablets, Smartphones und Laptops in Tools für
-    kollaboratives informatisches Denken verwandelt.
-    RULER.game ist zentraler Bestandteil unserer Kurse und wird laufend um neue
-    Funktionen erweitert.
-  </p>
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-    Lernen mit Kopf, Herz und Hand
-  </h3>
-  <p>
-    Unsere Workshops finden in kleinen Gruppen mit maximal 10 Kindern statt. Das
-    schafft Raum für individuelles Lernen, Teamarbeit und kreative Entfaltung – sowohl
-    am Bildschirm als auch darüber hinaus.
-  </p>
-  <p>
-    Wir vermitteln dabei:
-  </p>
+
+  <div
+    class="entry"
+    transition:animate="slide"
+  >
+    <Carousel images={images} />
+    <div id="carouselTargetList" class="relative h-52">
+      {
+        images.map((img, i) => {
+          return (
+            <a class="block absolute top-0 left-0 w-full h-52"
+              href={`?image=${i}`}
+              data-carousel-index={i}
+              aria-label={`Open image number ${i + 1}`}
+            >
+              <img
+                class="border-2 border-black rounded-xl h-52"
+                src={img.src}
+                alt="img1"
+                width="200"
+                height="200"
+                loading="eager"
+              />
+            </a>
+          );
+        })
+      }
+    </div>
+
+
+    <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+      Einzigartiges Werkzeug: RULER.game
+    </h3>
+    <p>
+      Wir arbeiten eng mit der Fachhochschule Nordwestschweiz (FHNW) zusammen und
+      sind aktiv an der Weiterentwicklung von RULER.game beteiligt – einer innovativen
+      Schweizer Lernumgebung, die Tablets, Smartphones und Laptops in Tools für
+      kollaboratives informatisches Denken verwandelt.
+      RULER.game ist zentraler Bestandteil unserer Kurse und wird laufend um neue
+      Funktionen erweitert.
+    </p>
+    <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+      Lernen mit Kopf, Herz und Hand
+    </h3>
+    <p>
+      Unsere Workshops finden in kleinen Gruppen mit maximal 10 Kindern statt. Das
+      schafft Raum für individuelles Lernen, Teamarbeit und kreative Entfaltung – sowohl
+      am Bildschirm als auch darüber hinaus.
+    </p>
+    <p>
+      Wir vermitteln dabei:
+    </p>
     <ul class="list-disc list-inside">
       <li>ein grundlegendes Verständnis für digitale Systeme,</li>
       <li>wie Computer „denken“ und Entscheidungen treffen,</li>
       <li>kreative Problemlösestrategien mit nachhaltigem Nutzen für Schule und Alltag.</li>
     </ul>
 
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-    Ergänzung zum Schulunterricht
-  </h3>
-  <p>
-    Unsere Angebote erweitern und vertiefen, was im regulären Primarschul-Unterricht
-    behandelt wird.
-    <strong>Lehrpersonen</strong> binden wir gerne aktiv in unsere Workshops ein, um gemeinsam neue
-    Wege in der informatischen Bildung zu beschreiten. Unsere Aktivitäten sind bestens dafür geeignet, direkt in der Schule durchgeführt zu werden.
-  </p>
+    <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+      Ergänzung zum Schulunterricht
+    </h3>
+    <p>
+      Unsere Angebote erweitern und vertiefen, was im regulären Primarschul-Unterricht
+      behandelt wird.
+      <strong>Lehrpersonen</strong> binden wir gerne aktiv in unsere Workshops ein, um gemeinsam neue
+      Wege in der informatischen Bildung zu beschreiten. Unsere Aktivitäten sind bestens dafür geeignet, direkt in der Schule durchgeführt zu werden.
+    </p>
 
-</div>
+  </div>
