@@ -1,0 +1,44 @@
+---
+import { Carousel } from "astro-carousel";
+const { images, zoomable } = Astro.props;
+---
+
+{ !zoomable &&
+  <div id="sliderContainer" class=" w-full overflow-x-scroll">
+    <div class="w-fit pb-4">
+      <div class="block" style="width: max-content">
+        {
+          images.map(({ src, alt }, i) => {
+            return (
+              <div style={`width:100px; height:100px; background-image: url('${src.split("?")[0]}'); background-size: cover; background-position-y: -20px;`} class="inline-block border-2 border-black rounded-xl overflow-hidden mr-2"></div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+}
+
+{ zoomable &&
+  <Carousel images={images} />
+  <div id="sliderContainer" class=" w-full overflow-x-scroll">
+    <div id="carouselTargetList" class="w-fit pb-4">
+      <div class="block" style="width: max-content">
+        {
+          images.map(({ src, alt }, i) => {
+            return (
+              <a
+                class="inline-block mr-2"
+                href={`?image=${i}`}
+                data-carousel-index={i}
+                aria-label={`Open image number ${i + 1}`}
+              >
+                <div style={`width:100px; height:100px; background-image: url(${src}); background-size: cover;`} class="inline-block border-2 border-black rounded-xl overflow-hidden"></div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+}

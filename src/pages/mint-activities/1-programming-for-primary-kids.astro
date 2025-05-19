@@ -6,6 +6,8 @@ import Sectionhead from "@components/sectionhead.astro";
 import Activity1 from "@components/activities/1-programming-for-primary-kids.astro";
 import { Icon } from "astro-icon/components";
 import Link from "../../components/ui/link.astro";
+import { Picture } from "astro:assets";
+import flyer1 from "assets/activities/ruler-pacman/wonder-dots-ruler-pacman.png";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -48,8 +50,11 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Hinweise
       </h2>
       <p class="text-lg text-slate-500">
-        Bitte bringt ein Tablet oder Smartphone mit. Leihgeräte sind bei Bedarf auch
-        vorhanden.
+        Bitte bringt ein Tablet oder Smartphone mit. Leihgeräte sind bei Bedarf aber auch vorhanden.
+        Eltern sind willkommen und können gerne mitmachen.
+      </p>
+      <p class="text-lg text-slate-500">
+        Interessierte Lehrpersonen können sich gern bei uns melden, um weitere Informationen für den eigenen Unterricht zu erhalten.
       </p>
 
       <h2 class="font-bold text-3xl text-gray-800">
@@ -62,10 +67,29 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         size="lg"
         appearance="activity"
         href="/mint-activities/1-programming-for-primary-kids"
-        class="flex gap-2 items-center justify-center mt-4 bg-white text-xl">
+        class="flex gap-2 items-center justify-center bg-white text-xl">
         <Icon class="text-black w-4 h-4" name="bx:info-circle" />
         Jetzt anmelden
       </Link>
+
+
+      <h2 class="font-bold text-3xl text-gray-800 mt-4">
+        Flyer zum Event
+      </h2>
+
+      <div class="mx-auto">
+
+        <Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+          <Picture
+            class="border-2 border-black rounded-xl"
+            src={flyer1}
+            alt="Flyer1"
+            widths={[200, 400, 800]}
+            loading="eager"
+            format="avif"
+          />
+        </Link>
+      </div>
     </div>
 
   </Container>

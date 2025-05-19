@@ -1,23 +1,51 @@
 ---
 import { Carousel } from "astro-carousel";
-import Image from "astro/components/Image.astro";
-import Picture from "astro/components/Picture.astro";
-const images = [
+import CarouselImages from "@components/carouselimages.astro";
+
+// read all files from filesystem in public/images/events/drawings
+const drawings = Object.entries(
+  import.meta.glob('/public/images/drawings/*.{png,jpg,jpeg,webp}', { eager: true })
+).map(([path, mod]) => ({
+    src: '/images/drawings/' + mod.default.src.split('/public/images/drawings/')[1],
+    alt: path.split('/').pop()?.split('.')[0] ?? '',
+    width: mod.default.width,
+    height: mod.default.height,
+  }));
+const eventimages = [
   {
-    src: "https://a.storyblok.com/f/95455/1350x1080/3ef7748922/p5240368.jpg",
-    alt: "",
-    format: "webp",
-    width: 1350,
-    height: 1080,
-    widths: [450, 675, 1350]
+    src: "/images/events/IMG_1418.jpg",
+    width: 180,
+    height: 180, alt: ""
   },
   {
-    src: "https://camo.githubusercontent.com/4afee3553d42f737af01b3f99f30a4f8835c56bf8af97cc1747771c3a0fddf12/68747470733a2f2f612e73746f7279626c6f6b2e636f6d2f662f39353435352f3235363078313630302f386264633636643765612f73637265656e73686f742d323032342d30342d32362d61742d31332d34322d30322e706e672f6d2f313238307830",
-    alt: "",
-    format: "webp",
-    width: 1350,
-    height: 1080,
-    widths: [450, 675, 1350]
+    src: "/images/events/IMG_1419.jpg",
+    width: 180,
+    height: 180, alt: ""
+  },
+  {
+    src: "/images/events/IMG_1726.jpg",
+    width: 180,
+    height: 180, alt: ""
+  },
+  {
+    src: "/images/events/IMG_1727.jpg",
+    width: 180,
+    height: 180, alt: ""
+  },
+  {
+    src: "/images/events/IMG_6869.jpg",
+    width: 180,
+    height: 180, alt: ""
+  },
+  {
+    src: "/images/events/IMG_6874.jpg",
+    width: 180,
+    height: 180, alt: ""
+  },
+  {
+    src: "/images/events/IMG_6881.jpg",
+    width: 180,
+    height: 180, alt: ""
   }
 ];
 ---
@@ -30,90 +58,70 @@ const images = [
   </h2>
 
   <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-    Informatik: Kreativ. Spielerisch. Verständlich.
+    Kreativ. Spielerisch. Verständlich.
   </h3>
   <p>
     Unsere Kurse sind keine herkömmlichen Programmierkurse:
-    Sie vermitteln kein Coding, sondern Computational Thinking – das logische,
+    Sie vermitteln <strong><a href="https://en.wikipedia.org/wiki/Computational_thinking" rel="nofollow noopener">Computational Thinking</a></strong> – das logische,
     strukturierte und kreative Denken, das hinter jeder Programmier-Lösung steckt.
   </p>
+  <p>
+    Kinder werden <strong>kreativ</strong> und zeichnen ihre eigenen Spielfiguren auf Papier.
+    Sie lernen wichtige <strong>Konzepte</strong> mit den Themen, die sie interessieren: <strong>Computerspiele</strong> begeistern - vor allem, die eigenen.
+    Einige Beispiele von Zeichnungen aus unseren Workshops:
+  </p>
+
+  <CarouselImages images={drawings} zoomable={false} />
 
   <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
     Erprobt & bewährt
   </h3>
   <p>
-    Unsere Inhalte wurden im Schulunterricht an Primarschulen und auf Messen wie der
+    Unsere Inhalte wurden <strong>im Unterricht an Primarschulen</strong> und <strong>auf Messen</strong> wie der
     <a href="https://tunbasel.ch/" rel="nofollow noopener">tunBasel</a>
     und der <a href="https://tunsolothurn.ch/" rel="nofollow noopener">tunSolothurn</a>
-    sowie bei Events im <a href="https://www.verkehrshaus.ch/" rel="nofollow noopener">Verkehrshaus der Schweiz</a>
-    in Luzern mit Hunderten von Kinden im Alter von 6 bis 14 Jahren erfolgreich getestet.
+    sowie <strong>bei Events</strong> im <a href="https://www.verkehrshaus.ch/" rel="nofollow noopener">Verkehrshaus der Schweiz</a>
+    in Luzern mit <strong>Hunderten von Kinden</strong> im Alter von 6 bis 14 Jahren erfolgreich getestet.
   </p>
 
-  <div
-    class="entry"
-    transition:animate="slide"
-  >
-    <Carousel images={images} />
-    <div id="carouselTargetList" class="relative h-52">
-      {
-        images.map((img, i) => {
-          return (
-            <a class="block absolute top-0 left-0 w-full h-52"
-              href={`?image=${i}`}
-              data-carousel-index={i}
-              aria-label={`Open image number ${i + 1}`}
-            >
-              <img
-                class="border-2 border-black rounded-xl h-52"
-                src={img.src}
-                alt="img1"
-                width="200"
-                height="200"
-                loading="eager"
-              />
-            </a>
-          );
-        })
-      }
-    </div>
+  <CarouselImages images={eventimages} zoomable={true} />
 
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Einzigartiges Werkzeug: RULER.game
+  </h3>
+  <p>
+    Wir arbeiten eng mit der Fachhochschule Nordwestschweiz (FHNW) zusammen und
+    sind aktiv an der Weiterentwicklung von RULER.game beteiligt – einer innovativen
+    Schweizer Lernumgebung, die Tablets, Smartphones und Laptops in Tools für
+    kollaboratives informatisches Denken verwandelt.
+    RULER.game ist zentraler Bestandteil unserer Kurse und wird laufend um neue
+    Funktionen erweitert.
+  </p>
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Lernen mit Kopf, Herz und Hand
+  </h3>
+  <p>
+    Unsere Workshops finden in kleinen Gruppen mit maximal 10 Kindern statt. Das
+    schafft Raum für individuelles Lernen, Teamarbeit und kreative Entfaltung – sowohl
+    am Bildschirm als auch darüber hinaus.
+  </p>
+  <p>
+    Wir vermitteln dabei:
+  </p>
+  <ul class="list-disc list-inside">
+    <li>ein grundlegendes Verständnis für digitale Systeme,</li>
+    <li>wie Computer „denken“ und Entscheidungen treffen,</li>
+    <li>kreative Problemlösestrategien mit nachhaltigem Nutzen für Schule und Alltag.</li>
+  </ul>
 
-    <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-      Einzigartiges Werkzeug: RULER.game
-    </h3>
-    <p>
-      Wir arbeiten eng mit der Fachhochschule Nordwestschweiz (FHNW) zusammen und
-      sind aktiv an der Weiterentwicklung von RULER.game beteiligt – einer innovativen
-      Schweizer Lernumgebung, die Tablets, Smartphones und Laptops in Tools für
-      kollaboratives informatisches Denken verwandelt.
-      RULER.game ist zentraler Bestandteil unserer Kurse und wird laufend um neue
-      Funktionen erweitert.
-    </p>
-    <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-      Lernen mit Kopf, Herz und Hand
-    </h3>
-    <p>
-      Unsere Workshops finden in kleinen Gruppen mit maximal 10 Kindern statt. Das
-      schafft Raum für individuelles Lernen, Teamarbeit und kreative Entfaltung – sowohl
-      am Bildschirm als auch darüber hinaus.
-    </p>
-    <p>
-      Wir vermitteln dabei:
-    </p>
-    <ul class="list-disc list-inside">
-      <li>ein grundlegendes Verständnis für digitale Systeme,</li>
-      <li>wie Computer „denken“ und Entscheidungen treffen,</li>
-      <li>kreative Problemlösestrategien mit nachhaltigem Nutzen für Schule und Alltag.</li>
-    </ul>
+  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+    Ergänzung zum Schulunterricht
+  </h3>
+  <p>
+    Unsere Angebote erweitern und vertiefen, was im regulären Primarschul-Unterricht
+    behandelt wird.
+    <strong>Lehrpersonen</strong> binden wir gerne aktiv in unsere Workshops ein, um gemeinsam neue
+    Wege in der informatischen Bildung zu beschreiten. Unsere Aktivitäten sind bestens dafür geeignet, direkt in der Schule durchgeführt zu werden.
+  </p>
 
-    <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
-      Ergänzung zum Schulunterricht
-    </h3>
-    <p>
-      Unsere Angebote erweitern und vertiefen, was im regulären Primarschul-Unterricht
-      behandelt wird.
-      <strong>Lehrpersonen</strong> binden wir gerne aktiv in unsere Workshops ein, um gemeinsam neue
-      Wege in der informatischen Bildung zu beschreiten. Unsere Aktivitäten sind bestens dafür geeignet, direkt in der Schule durchgeführt zu werden.
-    </p>
-
-  </div>
+</div>

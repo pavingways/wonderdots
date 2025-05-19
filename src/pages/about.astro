@@ -15,7 +15,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">Über uns</Fragment>
-      <Fragment slot="desc">Wir sind ein kleines und engagiertes Team</Fragment>
+      <Fragment slot="desc">Wir sind ein kleines, engagiertes Team</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
@@ -30,7 +30,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Wir möchten mit Wonder Dots Kinder spielerisch und kreativ an MINT Themen heranzuführen, um sie für eine technisierte Zukunft zu rüsten, Verständnis für Technik zu schaffen und sie zu befähigen, diese aktiv mitzugestalten.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <!--div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         publishedTeamMembers.map((teamMemberEntry) => (
           <div class="group">
@@ -54,6 +54,6 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
           </div>
         ))
       }
-    </div>
+    </div-->
   </Container>
 </Layout>
