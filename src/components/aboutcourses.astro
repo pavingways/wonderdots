@@ -6,7 +6,7 @@ import CarouselImages from "@components/carouselimages.astro";
 const drawings = Object.entries(
   import.meta.glob('/public/images/drawings/*.{png,jpg,jpeg,webp}', { eager: true })
 ).map(([path, mod]) => ({
-    src: '/images/drawings/' + mod.default.src.split('/public/images/drawings/')[1],
+    src: mod.default.src,
     alt: path.split('/').pop()?.split('.')[0] ?? '',
     width: mod.default.width,
     height: mod.default.height,

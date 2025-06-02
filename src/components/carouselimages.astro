@@ -10,7 +10,7 @@ const { images, zoomable } = Astro.props;
         {
           images.map(({ src, alt }, i) => {
             return (
-              <div style={`width:100px; height:100px; background-image: url('${src.split("?")[0]}'); background-size: cover; background-position-y: -20px;`} class="inline-block border-2 border-black rounded-xl overflow-hidden mr-2"></div>
+              <div style={`width:100px; height:100px; background-image: url('${src}'); background-size: cover; background-position-y: -20px;`} class="inline-block border-2 border-black rounded-xl overflow-hidden mr-2"></div>
             );
           })
         }
