@@ -5,5 +5,5 @@ avatar: {
     picture: "assets/team/rocco.jpeg",
     alt: "Rocco"
 }
-publishDate: "2022-11-06 15:39"
+publishDate: "2022-11-09 15:39"
 ---

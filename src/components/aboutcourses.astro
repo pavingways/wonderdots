@@ -3,13 +3,13 @@ import CarouselImages from "@components/carouselimages.astro";
 
 // read all files from filesystem in public/images/events/drawings
 const drawings = Object.entries(
-  import.meta.glob('/public/images/drawings/*.{png,jpg,jpeg,webp}', { eager: true })
+  import.meta.glob("/public/images/drawings/*.{png,jpg,jpeg,webp}", { eager: true })
 ).map(([path, mod]) => ({
-    src: mod.default.src,
-    alt: path.split('/').pop()?.split('.')[0] ?? '',
-    width: mod.default.width,
-    height: mod.default.height,
-  }));
+  src: mod.default.src,
+  alt: path.split("/").pop()?.split(".")[0] ?? "",
+  width: mod.default.width,
+  height: mod.default.height
+}));
 const eventimages = [
   {
     src: "/images/events/IMG_1418.jpg",
@@ -49,16 +49,10 @@ const eventimages = [
 ];
 ---
 
-<a id="aboutcourses" class="mb-16 block" />
-
-<div class="flex flex-col gap-6 mx-auto mt-16">
-  <h2 class="mt-4 mb-4 text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Über unsere Kurse
-  </h2>
-
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+<>
+  <h2 class="font-bold text-3xl text-gray-800">
     Kreativ. Spielerisch. Verständlich.
-  </h3>
+  </h2>
   <p>
     Unsere Kurse sind keine herkömmlichen Programmierkurse:
     Sie vermitteln <strong><a href="https://en.wikipedia.org/wiki/Computational_thinking" rel="nofollow noopener">Computational Thinking</a></strong> – das logische,
@@ -72,9 +66,9 @@ const eventimages = [
 
   <CarouselImages images={drawings} zoomable={false} />
 
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+  <h2 class="font-bold text-3xl text-gray-800">
     Erprobt & bewährt
-  </h3>
+  </h2>
   <p>
     Unsere Inhalte wurden <strong>im Unterricht an Primarschulen</strong> und <strong>auf Messen</strong> wie der
     <a href="https://tunbasel.ch/" rel="nofollow noopener">tunBasel</a>
@@ -85,9 +79,9 @@ const eventimages = [
 
   <CarouselImages images={eventimages} zoomable={true} />
 
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+  <h2 class="font-bold text-3xl text-gray-800">
     Einzigartiges Werkzeug: RULER.game
-  </h3>
+  </h2>
   <p>
     Wir arbeiten eng mit der Fachhochschule Nordwestschweiz (FHNW) zusammen und
     sind aktiv an der Weiterentwicklung von RULER.game beteiligt – einer innovativen
@@ -96,9 +90,10 @@ const eventimages = [
     RULER.game ist zentraler Bestandteil unserer Kurse und wird laufend um neue
     Funktionen erweitert.
   </p>
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+
+  <h2 class="font-bold text-3xl text-gray-800">
     Lernen mit Kopf, Herz und Hand
-  </h3>
+  </h2>
   <p>
     Unsere Workshops finden in kleinen Gruppen mit maximal 10 Kindern statt. Das
     schafft Raum für individuelles Lernen, Teamarbeit und kreative Entfaltung – sowohl
@@ -113,9 +108,9 @@ const eventimages = [
     <li>kreative Problemlösestrategien mit nachhaltigem Nutzen für Schule und Alltag.</li>
   </ul>
 
-  <h3 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+  <h2 class="font-bold text-3xl text-gray-800">
     Ergänzung zum Schulunterricht
-  </h3>
+  </h2>
   <p>
     Unsere Angebote erweitern und vertiefen, was im regulären Primarschul-Unterricht
     behandelt wird.
@@ -123,4 +118,4 @@ const eventimages = [
     Wege in der informatischen Bildung zu beschreiten. Unsere Aktivitäten sind bestens dafür geeignet, direkt in der Schule durchgeführt zu werden.
   </p>
 
-</div>
+</>

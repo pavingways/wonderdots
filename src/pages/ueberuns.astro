@@ -1,0 +1,92 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+publishedTeamMembers.sort(function(a, b) {
+  return a.data.publishDate.valueOf() - b.data.publishDate.valueOf();
+});
+---
+
+<Layout title="Über uns">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Über uns</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Empowering Kids
+      </h2>
+      <p>
+        Wir sind Diana und Rocco Georgi, selbst Eltern von Kindern im Primar- und Kanti-Alter und leidenschaftliche MINT-Fans.
+      </p>
+      <p>
+        <strong>
+          Mit Wonder Dots möchten wir Kindern früh den Zugang zu Informatik, Technik und Naturwissenschaften eröffnen. Spielerisch, kreativ und praxisnah.
+        </strong>
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Eltern für MINT
+      </h2>
+      <p>
+        Unsere Motivation: Seit über zehn Jahren leben wir unsere Begeisterung für MINT-Themen - privat und beruflich.
+        Wir sehen einen wachsenden Bedarf an informatischer Bildung in der Primarstufe.
+        Dem gegenüber stehen wenige Angebote und teilweise sogar der Abbau der bereits existierenden.
+      </p>
+      <p>
+        Wir möchten mit Wonder Dots Kinder spielerisch und kreativ an MINT-Themen heranführen,
+        um sie für eine technisier Zukunft zu rüsten und um Verständnis für Technik zu schaffen.
+        Wir wollen  Kinder befähigen, diese komplexe Zukunft aktiv mitzugestalten.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        publishedTeamMembers.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Picture
+                src={teamMemberEntry.data.avatar.picture}
+                alt={teamMemberEntry.data.avatar.alt}
+                sizes="(max-width: 800px) 100vw, 400px"
+                width={400}
+                height={400}
+                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+              />
+            </div>
+
+            <div class="mt-4 text-center  text-gray-800">
+                {teamMemberEntry.data.avatar.alt}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-8">
+      <p>
+        Diana ist Diplom-Betriebswirtin, arbeitet im Online-Marketing und bei der Gemeinde Meggen in der Schulbibliothek. Seit rund acht Jahren beschäftigt sie sich intensiv mit Montessori-Didaktik und MINT-Tools für Primarschüler. Sie kennt den
+        Schulalltag und bringt Organisationstalent, Kreativität und pädagogische Erfahrung in unsere Kurse ein.
+      </p>
+      <p>
+        Rocco ist Software Engineer (M.A.), entwickelt Software bei <a href="https://pax.ch">PAX</a> und ist im Team der Professur Informatische Bildung am Institut Primarstufe an der FHNW.
+        Dort entwickelt er die Bildungssoftware <a href="http://ruler.game">ruler.game</a> mit, die Lehrpersonen und Kinder im Computational Thinking unterstützt.
+
+        Er verfügt über mehr als 20 Jahre Erfahrung in Softwareentwicklung in internationalen Projekten und als Referent auf Fachkonferenzen.
+        Er ist zudem jede Woche als Bike-Guide beim Kidsride-Mountainbiking von Mapaki Meggen aktiv.
+      </p>
+    </div>
+
+  </Container>
+</Layout>

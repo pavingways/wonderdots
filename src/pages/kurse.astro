@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Aboutcourses from "../components/aboutcourses.astro";
+---
+
+<Layout title="Kurse">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Unsere Kurse</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <Aboutcourses/>
+    </div>
+
+  </Container>
+</Layout>
