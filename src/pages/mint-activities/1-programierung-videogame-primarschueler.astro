@@ -1,0 +1,120 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Activity1 from "@components/activities/1-programierung-videogame-primarschueler.astro";
+import { Icon } from "astro-icon/components";
+import Link from "../../components/ui/link.astro";
+---
+
+<Layout title="MINT Workshop 1 - Informatik für Primarschüler: Baue dein eigenes Videogame, Computational Thinking">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Baue Dein eigenes Videogame!</Fragment>
+      <Fragment slot="desc">
+        Ein eigenes Videogame zu entwickeln ist easy – das geht schon in der Primarschule
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Inhalt dieses Einzelkurses
+      </h2>
+      <p>
+        Dieser <strong>Einzelkurs</strong> richtet sich an Kinder im Alter zwischen ca. 7 bis 10 Jahre.
+      </p>
+      <p>
+        Die Kinder werden kreativ und lernen dabei die Grundlagen der Informatik auf spielerische und kreative Art kennen!
+        Sie zeichnen eigene Spielfiguren und entwickeln ihr erstes Videogame – <strong>ganz ohne Vorkenntnisse</strong>.
+      </p>
+      <blockquote class="text-black border-l-4 border-black pl-4">
+        Wir vermitteln die Konzepte des <a href="https://en.wikipedia.org/wiki/Computational_thinking" rel="nofollow noopener"><strong>Computational Thinking</strong></a>
+        und benutzen dabei die an der <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/ph/institute/institut-primarstufe/professuren-am-ip/professur-informatische-bildung/arbeitsgebiet" rel="nofollow noopener">FHNW</a>
+        entwickelte Lernsoftware <a href="https://ruler.game" rel="nofollow noopener">RULER.game</a>, die - wissenschaftlich fundiert - neue Wege in der Informatischen Bildung ermöglicht.
+      </blockquote>
+      <p>
+        In diesem Workshop gestalten Kinder ihre eigenen Spielfiguren – ganz klassisch und kreativ mit Stift und Papier.
+        Diese werden anschliessend digitalisiert und in ein eigenes kleines Spiel eingebaut.
+      </p>
+      <p>
+        Wir lernen nicht Programmieren, sondern wir wollen spielerisch anfangen zu verstehen, wie Abstraktion, Logik, Regeln und Abläufe im Computer funktionieren - eben das, was hinter jeder guten Software steckt, unabhängig von der
+        Programmiersprache.
+      </p>
+      <p>
+        Die Kinder zerlegen ein grösseres Problem (das Game) in einige kleinere. Sie verstehen, wie man einzelnen Schritte in der richtigen Reihenfolge aneinander reihen muss.
+        Der Computer kann diese dann ausführen. So hauchen wir den gezeichneten Figuren Leben ein und das Videogame entsteht.
+      </p>
+
+      <p>
+        Konkret werden wir diese Dinge anschauen:
+      </p>
+
+      <ul class="list-disc list-inside pl-5">
+        <li>einfache Wenn-Dann-Regeln (z.B. "Bewege die Figur mit dem Steuerkreuz")</li>
+        <li>wie Gegner im Spiel "denken" (z.B. Geister, die andere jagen)</li>
+        <li>wie man Punkte zählen kann (Kollisionen)</li>
+        <li>wie man Töne und Sounds ausgeben kann</li>
+        <li>wann "Game Over" ist</li>
+      </ul>
+
+      <p>
+        Und wenn das Game doch nicht fertig wird? Kein Problem: Mit einem QR-Code kann es
+        jederzeit zu Hause weiterentwickelt und mit der ganzen Familie und Freunden getestet werden.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">
+        Hinweise
+      </h2>
+      <p>
+        Bitte bringt ein Tablet oder Smartphone mit. Leihgeräte sind bei Bedarf in begrenzter Stückzahl vorhanden.
+      </p>
+      <p>
+        Eltern dürfen ihre Kinder gern begleiten und helfen.
+      </p>
+      <p>
+        Interessierte Lehrpersonen können sich gern bei uns melden, um weitere Informationen oder Anregungen für den eigenen Unterricht zu erhalten.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">
+        Details und Anmeldung
+      </h2>
+
+      <p>
+        Wir veranstalten diesen Kurs in Meggen in Kooperation mit <a href="https://www.mapaki.ch/" rel="nofollow noopener">MAPAKI</a>, die uns freundlicherweise mit einer Location und der Organisation unterstützen - Vielen Dank!
+        Die Anmeldung zum Kurs läuft daher ebenfalls über MAPAKI.
+      </p>
+
+      <Activity1 />
+
+      <Link
+        size="lg"
+        appearance="activity"
+        href="https://www.mapaki.ch/events/krabbeltreff-kontaktzmorge-128-645-237-492-588/"
+        class="flex gap-2 items-center justify-center bg-white text-xl">
+        <Icon class="text-black w-4 h-4" name="bx:pencil" />
+        Jetzt via MAPAKI anmelden
+      </Link>
+
+      <!--
+            <h2 class="font-bold text-3xl text-gray-800 mt-4">
+              Flyer zum Event
+            </h2>
+
+            <div class="mx-auto">
+
+              <Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+                <Picture
+                  class="border-2 border-black rounded-xl"
+                  src={flyer1}
+                  alt="Flyer1"
+                  widths={[200, 400, 800]}
+                  loading="eager"
+                  format="avif"
+                />
+              </Link>
+            </div>
+      -->
+
+    </div>
+  </Container>
+</Layout>

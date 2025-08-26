@@ -1,7 +1,7 @@
 ---
 import Container from "@components/container.astro";
 import Dropdown from "./dropdown.astro";
-import { Astronav, MenuItems } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Picture } from "astro:assets";
 import logoImage from "assets/wonder-dots-tree.svg";
 
@@ -11,16 +11,16 @@ const menuitems = [
     badge: false,
     children: [
       {
-        title: "Allgemeine Infos",
+        title: "Allgemeine Informationen",
         path: "/kurse"
       },
       {
-        title: "VideoGame einzel",
-        path: "/mint-activities/1-programming-for-primary-kids"
+        title: "Einzelkurs: Baue Dein eigenes Videogame!",
+        path: "/mint-activities/1-programierung-videogame-primarschueler"
       },
       {
-        title: "VideoGame 3-Tage",
-        path: "/mint-activities/2-programming-for-primary-kids-2"
+        title: "3er Serie Videogames für Kids ab 11 Jahren",
+        path: "/mint-activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler"
       }
     ]
   },
@@ -41,28 +41,29 @@ const menuitems = [
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-4 py-4 px-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center my-4 py-2 lg:px-5 max-w-screen-lg mx-auto">
     <Astronav>
-      <a href="/">
-        <div class="flex w-full lg:w-auto items-center justify-between">
-          <div class="hidden lg:block">
-            <Picture
-              src={logoImage}
-              alt="Wonder Dots Tree"
-              loading="eager"
-              formats={["svg"]}
-              class="mx-auto"
-              height={100}
-            />
-          </div>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="flex flex-row items-center min-w-[260px] gap-2 pt-6">
+          <Picture
+            src={logoImage}
+            alt="Wonder Dots Tree"
+            loading="eager"
+            formats={["svg"]}
+            class="mx-auto size-12 lg:size-20"
+            height={100}
+          />
           <div>
             <span class="text-3xl font-bold text-slate-800">Wonder Dots</span><br />
             <span class="text-md text-gray-500">MINT-Aktivitäten für Kids</span>
           </div>
+        </a>
+        <div class="block lg:hidden">
+          <MenuIcon class="mt-2 w-8 h-8 text-black" />
         </div>
-      </a>
+      </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+        <ul class="flex flex-col lg:flex-row lg:gap-3 items-center">
           {
             menuitems.map((item, index) => (
               <>
@@ -79,7 +80,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-2xl lg:text-xl text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 text-xl text-gray-600 hover:text-gray-900">
                       <span> {item.title}</span>
 
                       {item.badge && (

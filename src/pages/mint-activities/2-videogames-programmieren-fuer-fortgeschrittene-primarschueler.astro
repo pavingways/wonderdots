@@ -1,0 +1,121 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Activity2 from "@components/activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler.astro";
+import { Icon } from "astro-icon/components";
+import Link from "../../components/ui/link.astro";
+---
+
+<Layout title="MINT Workshop 2 - Informatik für Primarschüler: Baue eigene Videogames, Computational Thinking">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Baue Deine eigenen Videogames!</Fragment>
+      <Fragment slot="desc">
+        Eigene Videogames entwickeln ist easy – das geht schon ab der Primarschule
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Inhalt dieser Kurs-Serie
+      </h2>
+      <p>
+        Dieser <strong>dreiteilige Kurs</strong> richtet sich an etwas ältere Schüler ab ca. 11 Jahren.
+      </p>
+      <p>
+        Wie im Einzelkurs <a href="/mint-activities/1-programierung-videogame-primarschueler">Baue Dein eigenes Videogame!</a> starten wir mit dem kreativen Teil und zeichnen und fotografieren Spielfiguren, die wir dann in unser erstes Game einbauen.
+        Auch hier benötigt man keinerlei Vorkenntnisse.
+      </p>
+      <p>
+        Im Rahmen der Kursserie vertiefen wir einzelne Aspekte der vermittelten Konzepte und wir entwickeln mehrere Games mit verschiedenen Mechaniken.
+      </p>
+      <p>
+        Die Kinder werden auch hier kreativ und sie lernen auf spielerische Art die Grundlagen der Informatik kennen!
+        Angefangen mit dem Zeichnen eigener Spielfiguren entwickeln sie ihr erstes Videogame – auch hier geht das <strong>ganz ohne Vorkenntnisse</strong>.
+      </p>
+      <blockquote class="text-black border-l-4 border-black pl-4">
+        Wir vermitteln die Konzepte des <a href="https://en.wikipedia.org/wiki/Computational_thinking" rel="nofollow noopener"><strong>Computational Thinking</strong></a>
+        und benutzen dabei die an der <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/ph/institute/institut-primarstufe/professuren-am-ip/professur-informatische-bildung/arbeitsgebiet" rel="nofollow noopener">FHNW</a>
+        entwickelte Lernsoftware <a href="https://ruler.game" rel="nofollow noopener">RULER.game</a>, die - wissenschaftlich fundiert - neue Wege in der Informatischen Bildung ermöglicht.
+      </blockquote>
+      <p>
+        Wir lernen in diesem Kurs ebenfalls nicht Programmieren, sondern wir wollen verstehen, wie Abstraktion, Logik, Regeln und Abläufe in Computern funktionieren - also das, was hinter guter Software steckt, unabhängig von einer
+        Programmiersprache.
+      </p>
+      <p>
+        Im Verlauf des Kurses zerlegen die Kinder grössere Probleme (die Games) in kleinere Einheiten. Sie reihen einzelne Schritte in der richtigen Reihenfolge aneinander, so dass der Computer diese dann ausführen kann.
+        So enstehen kleine Videogames mit diversen Features.
+      </p>
+      <p>
+        Konkret werden wir diese Dinge anschauen:
+      </p>
+
+      <ul class="list-disc list-inside pl-5">
+        <li>einfache Wenn-Dann-Regeln (z.B. "Bewege die Figur mit dem Steuerkreuz")</li>
+        <li>wie Gegner im Spiel "denken" (z.B. Geister, die andere jagen)</li>
+        <li>wie man Punkte zählen kann (Kollisionen)</li>
+        <li>wie man Töne und Sounds ausgeben kann</li>
+        <li>wie man Scores zählen und manipulieren kann</li>
+        <li>wie mehrere Spieler gleichzeitig spielen können (Multiplayer)</li>
+        <li>wie sich Wahrscheinlichkeiten und Zufallszahlen anfühlen</li>
+        <li>wie Künstliche Intelligenz funktioniert</li>
+        <li>wann "Game Over" ist</li>
+      </ul>
+
+      <p>
+        Wenn die Games nicht fertig werden sollten - kein Problem: ein QR-Code für jedes Game ermöglicht es,
+        die Games jederzeit zu Hause weiterzuentwickeln und mit Familie und Freunden zu testen und zu erklären.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">
+        Hinweise
+      </h2>
+      <p>
+        Bitte bringt euer Tablet oder Smartphone mit. Leihgeräte sind bei Bedarf in begrenzter Stückzahl vorhanden.
+      </p>
+      <p>
+        Eltern dürfen ihre Kinder gern begleiten und helfen.
+      </p>
+      <p>
+        Interessierte Lehrpersonen können sich gern bei uns melden, um weitere Informationen oder Anregungen für den eigenen Unterricht zu erhalten.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">
+        Details und Anmeldung
+      </h2>
+
+      <Activity2 />
+
+      <Link
+        size="lg"
+        appearance="activity"
+        href="https://www.mapaki.ch/events/mintinformatikseriekurs/"
+        class="flex gap-2 items-center justify-center bg-white text-xl">
+        <Icon class="text-black w-4 h-4" name="bx:pencil" />
+        Jetzt via MAPAKI anmelden
+      </Link>
+
+      <!--
+            <h2 class="font-bold text-3xl text-gray-800 mt-4">
+              Flyer zum Event
+            </h2>
+
+            <div class="mx-auto">
+
+              <Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+                <Picture
+                  class="border-2 border-black rounded-xl"
+                  src={flyer1}
+                  alt="Flyer1"
+                  widths={[200, 400, 800]}
+                  loading="eager"
+                  format="avif"
+                />
+              </Link>
+            </div>
+      -->
+
+    </div>
+  </Container>
+</Layout>

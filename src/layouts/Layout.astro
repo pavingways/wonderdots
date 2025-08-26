@@ -31,8 +31,6 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
       description="Wonder Dots - Informatik und MINT Aktivitäten für Kids"
@@ -72,7 +70,10 @@ const makeTitle = title
       img {
         content-visibility: auto;
       }
-      a[rel~="nofollow"] {
+      p > a {
+          border-bottom: 1px solid lightgrey;
+      }
+      p > a[rel~="nofollow"] {
           border-bottom: 1px solid grey;
       }
     </style>

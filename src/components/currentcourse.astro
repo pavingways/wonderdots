@@ -3,11 +3,12 @@ import { Picture } from "astro:assets";
 import flyer1 from "assets/activities/ruler-pacman/wonder-dots-ruler-pacman.png";
 import Link from "./ui/link.astro";
 import { Icon } from "astro-icon/components";
-import Activity1 from "@components/activities/1-programming-for-primary-kids.astro";
+import ActivityCard1 from "@components/activities/1-programierung-videogame-primarschueler.astro";
+import ActivityCard2 from "@components/activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler.astro";
 ---
 <a id="current" class="block" />
 
-<section class="pt-12 max-w-screen-xl mx-auto bg-white xl:rounded-b-3xl">
+<section class="max-w-screen-xl mx-auto bg-transparent">
   <!-- emerald bubbles -->
   <div class="relative">
     <div class="absolute w-64 h-64 bg-emerald-300 rounded-full -top-20 -left-12"></div>
@@ -17,6 +18,8 @@ import Activity1 from "@components/activities/1-programming-for-primary-kids.ast
     <div class="absolute w-36 h-36 bg-emerald-300 rounded-full -top-10 right-80"></div>
     <div class="absolute w-64 h-64 bg-emerald-300 rounded-full -top-20 right-80"></div>
     <div class="absolute w-96 h-96 bg-emerald-300 rounded-full -top-12 right-10"></div>
+    <div class="absolute w-64 h-64 bg-emerald-300 rounded-full -top-20 right-10"></div>
+    <div class="absolute w-24 h-24 bg-emerald-300 rounded-full -top-5 right-0"></div>
   </div>
 
   <!-- content -->
@@ -28,34 +31,23 @@ import Activity1 from "@components/activities/1-programming-for-primary-kids.ast
     </div>
 
     <div class="grid md:grid-cols-6 gap-4 md:gap-16 place-items-top md:ml-4 md:mr-16">
-      <div class="md:col-span-4 stretch md:order-2 md:mb-16">
+      <div class="md:col-span-4 stretch md:order-1 md:mb-16">
 
-        <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mb-8">Wir kreieren ein Videogame!</h2>
+        <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">Baue Dein eigenes Videogame!</h2>
 
-        <Activity1 />
+        <Link href="/mint-activities/1-programierung-videogame-primarschueler" appearance="unstyled">
+          <ActivityCard1 />
+        </Link>
 
         <p class="mt-4">
           Die Kinder werden kreativ und lernen die Grundlagen der Informatik auf spielerische und kreative Art kennen!
           Sie zeichnen eigene Spielfiguren und entwickeln ihr erstes Game – ganz ohne Vorkenntnisse.
           Spielerisch entdecken die Kids dabei die Grundlagen von Programmierung, Logik und sogar ein kleines Stück KI.
         </p>
-        <p class="mt-4">
-          Interessierte Eltern dürfen ihre Kinder gern begleiten und helfen.
-        </p>
-        <p class="mt-4">
-          <Link
-            size="lg"
-            appearance="activity"
-            href="/mint-activities/1-programming-for-primary-kids"
-            class="inline-flex gap-2 items-center justify-center mt-4 bg-white text-xl">
-            <Icon class="text-black w-8 h-8" style="text-" name="bx:info-circle" />
-            <span class="hidden xs:inline">Jetzt entdecken und anmelden!</span>
-            <span class="inline xs:hidden">Jetzt anmelden!</span>
-          </Link>
-        </p>
+
       </div>
-      <div class="md:col-span-2 md:pt-11 md:order-1">
-        <Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+      <div class="md:col-span-2 md:pt-11 md:order-2">
+        <!-- Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
           <Picture
             class="border-2 border-black rounded-xl"
             src={flyer1}
@@ -64,7 +56,52 @@ import Activity1 from "@components/activities/1-programming-for-primary-kids.ast
             loading="eager"
             format="avif"
           />
+        </Link-->
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-6 gap-4 md:gap-16 place-items-top md:ml-4 md:mr-16">
+      <div class="md:col-span-4 stretch md:order-1 md:mb-16">
+
+        <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-10 md:mt-0">3er Serienkurs Informatik mit Videogames</h2>
+
+        <Link href="/mint-activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler" appearance="unstyled">
+          <ActivityCard2 />
         </Link>
+
+        <p class="mt-4">
+          Dieser <strong>dreiteilige Kurs</strong> richtet sich an etwas ältere Primarschüler.
+        </p>
+        <p>
+          Wie in <i>Baue Dein eigenes Videogame!</i> starten wir mit dem kreativen Teil und zeichnen und fotografieren Spielfiguren, die wir dann  in unser erstes Game einbauen.
+          Auch hier benötigt man keinerlei Vorkenntnisse.
+        </p>
+        <p>
+          Im Rahmen der Kursserie vertiefen wir einzelne Aspekte der vermittelten Konzepte und wir entwickeln mehrere Games mit verschiedenen Mechaniken.
+        </p>
+        <!--p class="mt-4">
+          <Link
+            size="lg"
+            appearance="activity"
+            href="/mint-activities/1-programierung-videogame-primarschueler"
+            class="inline-flex gap-2 items-center justify-center mt-4 bg-white text-xl">
+            <Icon class="text-black w-8 h-8" style="text-" name="bx:info-circle" />
+            <span class="hidden xs:inline">Jetzt entdecken und anmelden!</span>
+            <span class="inline xs:hidden">Jetzt anmelden!</span>
+          </Link>
+        </p-->
+      </div>
+      <div class="md:col-span-2 md:pt-11 md:order-2">
+        <!--Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+          <Picture
+            class="border-2 border-black rounded-xl"
+            src={flyer1}
+            alt="Flyer1"
+            widths={[200, 400, 800]}
+            loading="eager"
+            format="avif"
+          />
+        </Link-->
       </div>
     </div>
 
