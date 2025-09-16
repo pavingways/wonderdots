@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
-import flyer1 from "assets/activities/ruler-pacman/wonder-dots-ruler-pacman.png";
+import flyer1 from "assets/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-7-10.png";
+import flyer2 from "assets/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.png";
 import Link from "./ui/link.astro";
 import { Icon } from "astro-icon/components";
 import ActivityCard1 from "@components/activities/1-programierung-videogame-primarschueler.astro";
@@ -44,10 +45,20 @@ import ActivityCard2 from "@components/activities/2-videogames-programmieren-fue
           Sie zeichnen eigene Spielfiguren und entwickeln ihr erstes Game – ganz ohne Vorkenntnisse.
           Spielerisch entdecken die Kids dabei die Grundlagen von Programmierung, Logik und sogar ein kleines Stück KI.
         </p>
-
+        <p class="mt-4">
+          <Link
+            size="lg"
+            appearance="activity"
+            href="/mint-activities/1-programierung-videogame-primarschueler"
+            class="inline-flex gap-2 items-center justify-center mt-4 bg-white text-xl">
+            <Icon class="text-black w-8 h-8" name="bx:info-circle" />
+            <span class="hidden xs:inline">Jetzt Alle Details entdecken!</span>
+            <span class="inline xs:hidden">Alle Details!</span>
+          </Link>
+        </p>
       </div>
       <div class="md:col-span-2 md:pt-11 md:order-2">
-        <!-- Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+        <Link href="/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-7-10.pdf" appearance="unstyled" target="_blank">
           <Picture
             class="border-2 border-black rounded-xl"
             src={flyer1}
@@ -56,7 +67,7 @@ import ActivityCard2 from "@components/activities/2-videogames-programmieren-fue
             loading="eager"
             format="avif"
           />
-        </Link-->
+        </Link>
       </div>
     </div>
 
@@ -79,29 +90,29 @@ import ActivityCard2 from "@components/activities/2-videogames-programmieren-fue
         <p>
           Im Rahmen der Kursserie vertiefen wir einzelne Aspekte der vermittelten Konzepte und wir entwickeln mehrere Games mit verschiedenen Mechaniken.
         </p>
-        <!--p class="mt-4">
+        <p class="mt-4">
           <Link
             size="lg"
             appearance="activity"
-            href="/mint-activities/1-programierung-videogame-primarschueler"
+            href="/mint-activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler"
             class="inline-flex gap-2 items-center justify-center mt-4 bg-white text-xl">
-            <Icon class="text-black w-8 h-8" style="text-" name="bx:info-circle" />
-            <span class="hidden xs:inline">Jetzt entdecken und anmelden!</span>
-            <span class="inline xs:hidden">Jetzt anmelden!</span>
+            <Icon class="text-black w-8 h-8" name="bx:info-circle" />
+            <span class="hidden xs:inline">Jetzt Alle Details entdecken!</span>
+            <span class="inline xs:hidden">Alle Details!</span>
           </Link>
-        </p-->
+        </p>
       </div>
       <div class="md:col-span-2 md:pt-11 md:order-2">
-        <!--Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
+        <Link href="/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.pdf" appearance="unstyled" target="_blank">
           <Picture
             class="border-2 border-black rounded-xl"
-            src={flyer1}
-            alt="Flyer1"
+            src={flyer2}
+            alt="Flyer2"
             widths={[200, 400, 800]}
             loading="eager"
             format="avif"
           />
-        </Link-->
+        </Link>
       </div>
     </div>
 
