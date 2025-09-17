@@ -6,6 +6,8 @@ import Sectionhead from "@components/sectionhead.astro";
 import Activity1 from "@components/activities/1-programierung-videogame-primarschueler.astro";
 import ConceptQuote from "@components/conceptquote.astro";
 import Link from "@components/ui/link.astro";
+import flyer1 from "assets/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-7-10.png";
+import { Picture } from "astro:assets";
 ---
 
 <Layout title="MINT Workshop 1 - Informatik für Primarschüler: Baue dein eigenes Videogame, Computational Thinking">
@@ -17,12 +19,12 @@ import Link from "@components/ui/link.astro";
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+    <div class="mx-auto max-w-4xl mt-16 space-y-6">
       <h2 class="font-bold text-3xl text-gray-800">
-        Inhalt dieses Einzelkurses
+        Inhalt dieses 3-Stunden Kurses
       </h2>
       <p>
-        Dieser <strong>Einzelkurs</strong> richtet sich an Kinder im Alter zwischen ca. 7 bis 10 Jahre.
+        Dieser Kurs richtet sich an Kinder im Alter zwischen ca. 7 bis 10 Jahre und dauert ca. 3-Stunden.
       </p>
       <p>
         Die Kinder werden kreativ und lernen dabei die Grundlagen der Informatik auf spielerische und kreative Art kennen!
@@ -30,6 +32,17 @@ import Link from "@components/ui/link.astro";
       </p>
 
       <ConceptQuote />
+
+      <Link href="/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-7-10.pdf" appearance="unstyled" target="_blank">
+        <Picture
+          class="border-2 border-black rounded-xl float-right md:w-1/2 w-full md:ml-6 mt-12 mb-8"
+          src={flyer1}
+          alt="Informatik Kurs für Primarschüler ab 7 Jahren"
+          widths={[200, 400, 800]}
+          loading="eager"
+          format="avif"
+        />
+      </Link>
 
       <p>
         In diesem Workshop gestalten Kinder ihre eigenen Spielfiguren – ganz klassisch und kreativ mit Stift und Papier.
@@ -48,12 +61,13 @@ import Link from "@components/ui/link.astro";
         Konkret werden wir diese Dinge anschauen:
       </p>
 
-      <ul class="list-disc list-inside pl-5">
-        <li>einfache Wenn-Dann-Regeln (z.B. "Bewege die Figur mit dem Steuerkreuz")</li>
-        <li>wie Gegner im Spiel "denken" (z.B. Geister, die andere jagen)</li>
+      <ul class="list-disc list-inside pl-4">
+        <li>einfache IF/THEN-Regeln</li>
         <li>wie man Punkte zählen kann (Kollisionen)</li>
+        <li>wie Gegner im Spiel "denken"</li>
         <li>wie man Töne und Sounds ausgeben kann</li>
-        <li>wann "Game Over" ist</li>
+        <li>wie Künstliche Intelligenz funktioniert</li>
+        <li>wann "Game Over" ist :)</li>
       </ul>
 
       <p>
@@ -93,26 +107,6 @@ import Link from "@components/ui/link.astro";
         <Icon class="text-black w-4 h-4" name="bx:pencil" />
         Jetzt via MAPAKI anmelden
       </Link>
-
-      <!--
-            <h2 class="font-bold text-3xl text-gray-800 mt-4">
-              Flyer zum Event
-            </h2>
-
-            <div class="mx-auto">
-
-              <Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
-                <Picture
-                  class="border-2 border-black rounded-xl"
-                  src={flyer1}
-                  alt="Flyer1"
-                  widths={[200, 400, 800]}
-                  loading="eager"
-                  format="avif"
-                />
-              </Link>
-            </div>
-      -->
 
     </div>
   </Container>

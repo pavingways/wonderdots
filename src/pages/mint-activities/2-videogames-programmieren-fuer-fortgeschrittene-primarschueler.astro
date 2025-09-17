@@ -6,18 +6,20 @@ import Link from "@components/ui/link.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Activity2 from "@components/activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler.astro";
 import ConceptQuote from "@components/conceptquote.astro";
+import flyer2 from "assets/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.png";
+import { Picture } from "astro:assets";
 ---
 
 <Layout title="MINT Workshop 2 - Informatik für Primarschüler: Baue eigene Videogames, Computational Thinking">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Baue Deine eigenen Videogames!</Fragment>
+      <Fragment slot="title">Wir bauen Videogames!</Fragment>
       <Fragment slot="desc">
-        Eigene Videogames entwickeln ist easy – das geht schon ab der Primarschule
+        Eigene Videogames entwickeln ist easy – das geht schon im Primarschulalter
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-6 mx-auto max-w-4xl mt-16">
+    <div class="mx-auto max-w-4xl mt-16 space-y-6">
       <h2 class="font-bold text-3xl text-gray-800">
         Inhalt dieser Kurs-Serie
       </h2>
@@ -25,9 +27,10 @@ import ConceptQuote from "@components/conceptquote.astro";
         Dieser <strong>dreiteilige Kurs</strong> richtet sich an etwas ältere Schüler ab ca. 11 Jahren.
       </p>
       <p>
-        Wie im Einzelkurs <a href="/mint-activities/1-programierung-videogame-primarschueler">Baue Dein eigenes Videogame!</a> starten wir mit dem kreativen Teil und zeichnen und fotografieren Spielfiguren, die wir dann in unser erstes Game einbauen.
+        Wie im 3-Stunden Kurs <a href="/mint-activities/1-programierung-videogame-primarschueler">Baue Dein eigenes Videogame!</a> starten wir mit dem kreativen Teil und zeichnen und fotografieren Spielfiguren, die wir dann in unser erstes Game einbauen.
         Auch hier benötigt man keinerlei Vorkenntnisse.
       </p>
+
       <p>
         Im Rahmen der Kursserie vertiefen wir einzelne Aspekte der vermittelten Konzepte und wir entwickeln mehrere Games mit verschiedenen Mechaniken.
       </p>
@@ -38,8 +41,19 @@ import ConceptQuote from "@components/conceptquote.astro";
 
       <ConceptQuote />
 
+      <Link href="/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.pdf" appearance="unstyled" target="_blank">
+        <Picture
+          class="border-2 border-black rounded-xl float-right md:w-1/2 w-full md:ml-6 mt-12 mb-8"
+          src={flyer2}
+          alt="Informatik Kurs für Primarschüler ab 11 Jahren"
+          widths={[200, 400, 800]}
+          loading="eager"
+          format="avif"
+        />
+      </Link>
+
       <p>
-        Wir lernen in diesem Kurs ebenfalls nicht Programmieren, sondern wir wollen verstehen, wie Abstraktion, Logik, Regeln und Abläufe in Computern funktionieren - also das, was hinter guter Software steckt, unabhängig von einer
+        Wir lernen in diesem Kurs nicht Programmieren, sondern wir wollen verstehen, wie Abstraktion, Logik, Regeln und Abläufe in Computern funktionieren - also das, was hinter guter Software steckt, unabhängig von einer
         Programmiersprache.
       </p>
       <p>
@@ -50,16 +64,16 @@ import ConceptQuote from "@components/conceptquote.astro";
         Konkret werden wir diese Dinge anschauen:
       </p>
 
-      <ul class="list-disc list-inside pl-5">
-        <li>einfache Wenn-Dann-Regeln (z.B. "Bewege die Figur mit dem Steuerkreuz")</li>
-        <li>wie Gegner im Spiel "denken" (z.B. Geister, die andere jagen)</li>
+      <ul class="list-disc list-inside pl-4">
+        <li>einfache IF/THEN-Regeln</li>
         <li>wie man Punkte zählen kann (Kollisionen)</li>
         <li>wie man Töne und Sounds ausgeben kann</li>
         <li>wie man Scores zählen und manipulieren kann</li>
-        <li>wie mehrere Spieler gleichzeitig spielen können (Multiplayer)</li>
-        <li>wie sich Wahrscheinlichkeiten und Zufallszahlen anfühlen</li>
+        <li>wie mehrere Spieler gleichzeitig spielen können</li>
+        <li>wie sich Wahrscheinlichkeiten anfühlen</li>
+        <li>wie Gegner im Spiel "denken"</li>
         <li>wie Künstliche Intelligenz funktioniert</li>
-        <li>wann "Game Over" ist</li>
+        <li>wann "Game Over" ist :)</li>
       </ul>
 
       <p>
@@ -67,7 +81,7 @@ import ConceptQuote from "@components/conceptquote.astro";
         die Games jederzeit zu Hause weiterzuentwickeln und mit Familie und Freunden zu testen und zu erklären.
       </p>
 
-      <h2 class="font-bold text-3xl text-gray-800">
+      <h2 class="font-bold text-3xl text-gray-800 clear-both">
         Hinweise
       </h2>
       <p>
@@ -94,26 +108,6 @@ import ConceptQuote from "@components/conceptquote.astro";
         <Icon class="text-black w-4 h-4" name="bx:pencil" />
         Jetzt via MAPAKI anmelden
       </Link>
-
-      <!--
-            <h2 class="font-bold text-3xl text-gray-800 mt-4">
-              Flyer zum Event
-            </h2>
-
-            <div class="mx-auto">
-
-              <Link href="/activities/ruler-pacman/wonder-dots-ruler-pacman.pdf" appearance="unstyled" target="_blank">
-                <Picture
-                  class="border-2 border-black rounded-xl"
-                  src={flyer1}
-                  alt="Flyer1"
-                  widths={[200, 400, 800]}
-                  loading="eager"
-                  format="avif"
-                />
-              </Link>
-            </div>
-      -->
 
     </div>
   </Container>
