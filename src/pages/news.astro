@@ -51,14 +51,14 @@ publishedNewsEntries.sort(function (a, b) {
                     </h2>
 
                     <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {newsPostEntry.data.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
+                      <!--<span class="text-gray-400">-->
+                      <!--  {newsPostEntry.data.author}-->
+                      <!--</span>-->
+                      <!--<span class="text-gray-400">• </span>-->
                       <time
                         class="text-gray-400"
                         datetime={newsPostEntry.data.publishDate.toISOString()}>
-                        {newsPostEntry.data.publishDate.toDateString()}
+                        {newsPostEntry.data.publishDate.toLocaleDateString("de-CH", {})}
                       </time>
                     </div>
                   </div>
