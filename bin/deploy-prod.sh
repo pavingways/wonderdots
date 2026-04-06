@@ -4,7 +4,7 @@ rsync -avr --delete-before  \
   --exclude=".*" \
   ./dist/ ../wonderdots.github.io/
 cp .gitignore ../wonderdots.github.io/
-cd ../wonderdots.github.io/
+cd ../wonderdots.github.io/ || exit
 git add .
 git commit -am "release $(date +'%Y-%m-%d')"
 git push origin main
