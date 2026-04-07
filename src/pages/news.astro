@@ -29,7 +29,7 @@ publishedNewsEntries.sort(function (a, b) {
         {
           publishedNewsEntries.map((newsPostEntry, index) => (
             <li>
-              <a href={`/news/${newsPostEntry.slug}`}>
+              <a href={`/news/${newsPostEntry.id}`}>
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
                   <Picture
                     src={newsPostEntry.data.image.src}

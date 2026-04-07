@@ -1,8 +1,9 @@
 // 1. Import utilities from `astro:content`
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
-// 2. Define your collection(s)
 const newsCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/news" }),
   schema: z.object({
     draft: z.boolean(),
     title: z.string(),
@@ -19,6 +20,7 @@ const newsCollection = defineCollection({
 });
 
 const teamCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/team" }),
   schema: ({ image }) => z.object({
     draft: z.boolean(),
     name: z.string(),
