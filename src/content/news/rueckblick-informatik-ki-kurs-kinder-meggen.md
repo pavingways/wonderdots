@@ -18,7 +18,7 @@ Mit einer kleineren, fokussierten Gruppe von 6 Kindern verwandelte sich das Geme
 Was diese junge Gruppe in der kurzen Zeit auf die Beine gestellt hat, war absolut beeindruckend und zeigt, wie viel Potenzial im **Programmieren für Kinder** steckt.
 
 ### Vom Startschuss zum fertigen Game in nur zwei Stunden
-Da die Kinder in der 4. und 5. Klasse schon etwas älter waren, haben wir das Tempo angezogen. 
+Da die Kinder in der 4., 5. und 6. Klasse schon etwas älter waren, konnten wir das Tempo für diese Gruppe etwas anziehen. 
 In der ersten Einheit haben wir die Inhalte des dreistündigen Einsteigerkurses auf knackige zwei Stunden komprimiert. 
 Die sonst übliche Aktivität im Freien haben wir diesmal weggelassen und uns direkt auf die Umsetzung konzentriert.
 
