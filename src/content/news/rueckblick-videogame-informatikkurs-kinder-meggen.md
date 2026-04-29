@@ -52,7 +52,9 @@ Am Ende der 3 Stunden – die für alle Beteiligten viel zu kurz waren – hatte
 In den letzten Minuten kamen die Eltern dazu und die jungen Entwickler präsentierten voller Stolz ihre Meisterwerke. Die Begeisterung war so gross, dass einige Kinder am Ende noch länger blieben, um an ihren Games weiterzuarbeiten, bis wir den Raum schliesslich räumen mussten. Und die Lernerfahrung endete nicht im Kursraum: Jedes Kind erhielt einen eigenen QR-Code, mit dem das Game jederzeit zu Hause weitergespielt und weiterentwickelt werden kann.
 
 ### Begeistertes Feedback: "Mein neues Lieblings-Hobby!"
-Wir waren zutiefst beeindruckt vom enormen Engagement der Kinder und den cleveren Lösungen, die in so kurzer Zeit entstanden sind. Dass wir den Nerv der Zeit getroffen haben, zeigte auch das wunderbare Feedback. "Ich habe ein neues Lieblings-Hobby – Games Programmieren!", freute sich ein Kind. Ein anderes kündigte hochmotiviert an: "Ich programmiere das ganze Wochenende noch weiter an meinem Game."
+Wir waren zutiefst beeindruckt vom enormen Engagement der Kinder und den cleveren Lösungen, die in so kurzer Zeit entstanden sind. 
+Dass wir den Nerv der Zeit getroffen haben, zeigte auch das wunderbare Feedback. "Ich habe ein neues Lieblings-Hobby – Games Programmieren!", freute sich ein Teilnehmer.
+Ein anderer kündigte hochmotiviert an: "Ich programmiere das ganze Wochenende noch weiter an meinem Game."
 
 Auch die Eltern waren durchweg begeistert davon, was ihre Kinder in nur drei Stunden erschaffen hatten. Das grosse Interesse an **MINT Kursen in Luzern** und Umgebung spiegelte sich in zahlreichen Nachfragen nach Folgekursen, weiteren Angeboten und sogar dem Wunsch nach eigenen Schulungen für Eltern wider.
 
