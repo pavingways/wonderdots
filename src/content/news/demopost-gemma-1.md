@@ -1,6 +1,6 @@
 ---
 draft: true
-slug: "die-4-saeulen-des-computational-thinking"
+slug: "die-vier-saeulen-des-computational-thinking"
 title: "Die digitale Revolution im Klassenzimmer: Warum Computational Thinking jetzt wichtig ist"
 snippet: "Warum Informatik mehr ist als nur Programmieren und wie der Lehrplan 21 die Rolle von Computational Thinking in der Schweizer Primarschule definiert."
 image: {

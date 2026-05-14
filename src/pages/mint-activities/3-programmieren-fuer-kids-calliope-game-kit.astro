@@ -1,0 +1,156 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Activity2 from "@components/activities/2-videogames-programmieren-fuer-fortgeschrittene-primarschueler.astro";
+import ConceptQuote from "@components/conceptquote.astro";
+import flyer2 from "assets/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.png";
+import { Picture } from "astro:assets";
+---
+
+<Layout title="MINT Workshop 2 - Informatik für Primarschüler: Baue eigene Videogames, Computational Thinking">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Wir bauen Videogames!</Fragment>
+      <Fragment slot="desc">
+        Eigene Videogames entwickeln ist easy – das geht schon im Primarschulalter
+      </Fragment>
+    </Sectionhead>
+
+    <div class="mx-auto max-w-4xl mt-16 space-y-6">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Inhalt dieser Kurs-Serie
+      </h2>
+      <p>
+        Dieser <strong>dreiteilige Kurs</strong> richtet sich an etwas ältere Schüler ab ca. 11 Jahren.
+      </p>
+      <p>
+        Wie im 3-Stunden Kurs <a href="/mint-activities/1-programierung-videogame-primarschueler">Baue Dein eigenes Videogame!</a> starten wir mit dem kreativen Teil und zeichnen und fotografieren Spielfiguren, die wir dann in unser erstes Game einbauen.
+        Auch hier benötigt man keinerlei Vorkenntnisse.
+      </p>
+
+      <p>
+        Im Rahmen der Kursserie vertiefen wir einzelne Aspekte der vermittelten Konzepte und wir entwickeln mehrere Games mit verschiedenen Mechaniken.
+      </p>
+      <p>
+        Die Kinder werden auch hier kreativ und sie lernen auf spielerische Art die Grundlagen der Informatik kennen!
+        Angefangen mit dem Zeichnen eigener Spielfiguren entwickeln sie ihr erstes Videogame – auch hier geht das <strong>ganz ohne Vorkenntnisse</strong>.
+      </p>
+
+      <ConceptQuote />
+
+      <Link href="/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.pdf" appearance="unstyled" target="_blank">
+        <Picture
+          class="border-2 border-black rounded-xl float-right md:w-1/2 w-full md:ml-6 mt-12 mb-8"
+          src={flyer2}
+          alt="Informatik Kurs für Primarschüler ab 11 Jahren"
+          widths={[200, 400, 800]}
+          loading="eager"
+          format="avif"
+        />
+      </Link>
+
+      <p>
+        Wir lernen in diesem Kurs nicht Programmieren, sondern wir wollen verstehen, wie Abstraktion, Logik, Regeln und Abläufe in Computern funktionieren - also das, was hinter guter Software steckt, unabhängig von einer
+        Programmiersprache.
+      </p>
+      <p>
+        Im Verlauf des Kurses zerlegen die Kinder grössere Probleme (die Games) in kleinere Einheiten. Sie reihen einzelne Schritte in der richtigen Reihenfolge aneinander, so dass der Computer diese dann ausführen kann.
+        So enstehen kleine Videogames mit diversen Features.
+      </p>
+      <p>
+        Konkret werden wir diese Dinge anschauen:
+      </p>
+
+      <ul class="list-disc list-inside pl-4">
+        <li>einfache IF/THEN-Regeln</li>
+        <li>wie man Punkte zählen kann (Kollisionen)</li>
+        <li>wie man Töne und Sounds ausgeben kann</li>
+        <li>wie man Scores zählen und manipulieren kann</li>
+        <li>wie mehrere Spieler gleichzeitig spielen können</li>
+        <li>wie sich Wahrscheinlichkeiten anfühlen</li>
+        <li>wie Gegner im Spiel "denken"</li>
+        <li>wie Künstliche Intelligenz funktioniert</li>
+        <li>wann "Game Over" ist :)</li>
+      </ul>
+
+      <p>
+        Wenn die Games nicht fertig werden sollten - kein Problem: ein QR-Code für jedes Game ermöglicht es,
+        die Games jederzeit zu Hause weiterzuentwickeln und mit Familie und Freunden zu testen und zu erklären.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800 clear-both">
+        Hinweise
+      </h2>
+      <p>
+        Bitte bringt euer Tablet oder Smartphone mit. Leihgeräte sind bei Bedarf in begrenzter Stückzahl vorhanden.
+      </p>
+      <p>
+        Eltern dürfen ihre Kinder gern begleiten und helfen.
+      </p>
+      <p>
+        Interessierte Lehrpersonen können sich <a href="/kontakt/">gern bei uns melden</a>, um weitere Informationen oder Anregungen für den eigenen Unterricht zu erhalten.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">
+        Details
+      </h2>
+
+      <Activity2 />
+<!--
+      <Link
+        size="lg"
+        appearance="activity"
+        href="https://www.mapaki.ch/events/mintinformatikseriekurs/"
+        class="flex gap-2 items-center justify-center bg-white text-xl">
+        <Icon class="text-black w-4 h-4" name="bx:pencil" />
+        Jetzt via MAPAKI anmelden
+      </Link>
+-->
+    </div>
+  </Container>
+</Layout>
+
+
+---
+draft: false
+title: "Rückblick: Eigene Handheld-Konsole programmieren – MINT Workshop mit dem Calliope GameKit"
+snippet: "Ein eigenes Retro-Game auf einer echten Konsole spielen? In unserem 3-tägigen Workshop haben Kinder ab 10 Jahren mit dem Calliope GameKit und MakeCode Arcade genau das gemacht – ganz ohne Vorkenntnisse!"
+image: 
+  src: "/images/news/mint-kurs-calliope-gamekit-makecode.jpg"
+  alt: "Kinder programmieren ein eigenes Videogame mit dem Calliope GameKit und MakeCode Arcade"
+publishDate: "2026-05-10 12:00"
+category: "News"
+author: "Wonder Dots"
+tags: [mint, informatik, kinder, calliope-mini, makecode-arcade, videogames, hardware]
+slug: "rueckblick-handheld-videogame-calliope-makecode-kinder"
+---
+
+Wer hat nicht schon einmal davon geträumt, ein eigenes Videospiel nicht nur am Bildschirm zu spielen, sondern auf einer echten, tragbaren Konsole in den Händen zu halten? In unserem 3-tägigen **Informatikkurs** für Kinder ab 10 Jahren haben wir genau diesen Traum wahr gemacht! 
+
+Nach unseren erfolgreichen [Einstiegskursen](/news/rueckblick-videogame-informatikkurs-kinder-meggen) gingen wir in diesem Workshop noch einen Schritt weiter und verbanden die Software-Entwicklung direkt mit greifbarer Hardware. Das Ergebnis: Begeisterte junge Entwicklerinnen und Entwickler und fantastische, selbst programmierte Retro-Games!
+
+### Hardware hautnah: Das Calliope GameKit verstehen
+Bevor wir in die digitale Welt abtauchten, schauten wir uns die Hardware ganz genau an. Woraus besteht eigentlich so eine Konsole? Die Kinder lernten den kleinen, aber leistungsstarken Calliope mini kennen und erweiterten ihn mit dem **GameKit**. Dabei handelt es sich um eine Arcade-Erweiterung, die den Mikrocontroller in ein echtes Handheld-Gerät mit Steuerkreuz-Tasten und einem brillanten Farbdisplay verwandelt [1]. 
+
+Die Kinder durften die Hardware "Rücken an Rücken" zusammenstecken [1], die Batterien anschliessen und so im wahrsten Sinne des Wortes begreifen, wie die Technik in ihren Händen funktioniert.
+
+### Kreativität auf Papier: Der Game-Entwurf
+Genau wie in unseren anderen **MINT Kursen** stand am Anfang nicht der Code, sondern die reine Kreativität. Die Kinder nutzten ganz klassisch Stift und Papier, um ihre Spielideen, Charaktere und Level zu entwerfen. Dieses analoge Brainstorming hilft enorm dabei, ein Spielkonzept zu strukturieren und die Fantasie frei fliessen zu lassen, bevor es an die technische Umsetzung geht.
+
+### Programmieren mit Microsoft MakeCode Arcade
+Anschliessend ging es an die Computer. Um die gezeichneten Ideen zum Leben zu erwecken, nutzten wir die ansteigerfreundliche Lernplattform **Microsoft MakeCode Arcade** [2]. 
+
+Warum MakeCode Arcade so genial für Kinder ist?
+* **Ganz ohne Vorkenntnisse:** Die Programmierung erfolgt visuell über bunte Blöcke, die einfach per Drag-and-Drop zusammengesetzt werden [2]. So können sich die Kids voll auf die Logik konzentrieren, ohne komplizierte Text-Befehle lernen zu müssen.
+* **Retro-Feeling:** Die Plattform ist perfekt darauf ausgelegt, coole 2D-Retro-Spiele zu entwickeln, komplett mit eigenen Spielfiguren (Sprites), Hintergründen und Sounds [1, 2].
+* **Live-Vorschau:** Die Kinder konnten ihre Games direkt im Browser testen und verfeinern [2], bevor sie auf die Konsole übertragen wurden.
+
+### Das Highlight: Das eigene Game in den Händen halten
+Nachdem die Logik programmiert war, kam der aufregendste Moment: Die fertigen Spiele wurden per USB-Kabel auf das zusammengebaute Calliope GameKit übertragen [1]. Plötzlich leuchtete das Farbdisplay auf, und die Kinder konnten ihre eigenen Games mit den echten Tasten ihrer Handheld-Konsole spielen!
+
+Am Ende des dritten Tages präsentierten die stolzen Entwicklerinnen und Entwickler ihre fertigen Arcade-Spiele den staunenden Eltern. Die Kombination aus selbst gezeichneten Ideen, dem Verständnis für echte Hardware und der blockbasierten Programmierung hat einmal mehr gezeigt: **Programmieren für Kinder** ist ein unglaubliches Abenteuer!
+
+Möchten Sie informiert werden, sobald neue Termine für unsere **Programmierkurse für Kinder** feststehen? Behalten Sie unsere [Kurs-Übersicht](#) im Auge oder kontaktieren Sie uns direkt!
