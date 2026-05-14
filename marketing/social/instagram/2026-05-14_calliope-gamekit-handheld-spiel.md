@@ -7,7 +7,7 @@
 
 ## Caption
 
-🎮 Kinder, die eigene Videospiele bauen – klingt verrückt? Ist es nicht!
+🎮 Kinder, die eigene Videospiele bauen – klingt lustig, oder? Ist es auch!
 
 Mit dem **Calliope GameKit** wird aus einem kleinen Mikrocontroller eine echte Handheld-Konsole. Kinder bauen sie selbst zusammen, programmieren ihr erstes Spiel und nehmen es am Ende mit nach Hause. 🕹️✨
 
