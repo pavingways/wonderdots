@@ -1,19 +1,20 @@
 ---
-draft: true
-title: "Mit dem Calliope mini GameKit zum eigenen Handheld-Spiel – Computational Thinking zum Anfassen"
-snippet: "Das Calliope mini GameKit verwandelt einen Mikrocontroller in eine echte Arcade-Konsole. Wie Kinder damit spielend Programmieren lernen, Computational Thinking entwickeln und warum dieses Tool perfekt für den Informatikunterricht in der Primarschule ist."
+draft: false
+title: "Mit dem Calliope GameKit zum eigenen Handheld-Spiel"
+snippet: "Das Calliope GameKit verwandelt einen Mikrocontroller in eine echte Arcade-Konsole. Wie Kinder damit spielend Programmieren lernen, Computational Thinking entwickeln und warum dieses Tool perfekt für den Informatikunterricht in der Primarschule ist."
 image:
   src: "/images/news/calliope-gamekit-kinder-programmieren.jpg"
-  alt: "Kind programmiert eigenes Spiel mit dem Calliope mini GameKit"
-publishDate: "2026-05-19 09:00"
+  alt: "Calliope GameKit"
+publishDate: "2026-05-14 09:00"
 category: "Computational Thinking"
 author: "Wonder Dots"
 tags: [calliope-mini, gamekit, computational-thinking, programmieren-kinder, primarschule, informatik-grundschule, makecode-arcade, handheld-spiel, coding-kinder, mint]
 ---
 
-Was wäre, wenn Kinder nicht nur Videospiele spielen, sondern sie selbst bauen würden? Genau das ermöglicht das **Calliope mini GameKit** – und es ist einfacher, zugänglicher und spannender, als die meisten Erwachsenen vermuten würden.
+Computational Thinking zum Anfassen: 
+Was wäre, wenn Kinder nicht nur Videospiele spielen, sondern sie selbst bauen würden? Genau das ermöglicht das **Calliope GameKit** – und es ist einfacher, zugänglicher und spannender, als die meisten Erwachsenen vermuten würden.
 
-Bei Wonder Dots setzen wir das GameKit in unserem neuen Kurs *«Programmiere dein eigenes Handheld-Spiel»* ein – und die Reaktionen der Kinder sprechen für sich. Doch bevor wir vom Kurs berichten, lohnt es sich, einen Blick auf das Tool selbst zu werfen: Was ist das Calliope mini GameKit eigentlich – und warum ist es so gut geeignet, um Kindern Informatik und Computational Thinking beizubringen?
+Bei Wonder Dots setzen wir das GameKit in unserem neuen Kurs *«Programmiere dein eigenes Handheld-Spiel»* ein – und die Reaktionen der Kinder sprechen für sich. Doch bevor wir vom Kurs berichten, lohnt es sich, einen Blick auf das Tool selbst zu werfen: Was ist das Calliope GameKit eigentlich – und warum ist es so gut geeignet, um Kindern Informatik und Computational Thinking beizubringen?
 
 ## Was ist der Calliope mini?
 
@@ -21,17 +22,17 @@ Der [Calliope mini](https://calliope.cc) ist ein kleiner Mikrocontroller, der sp
 
 ## Das GameKit: Aus dem Mikrocontroller wird eine Spielkonsole
 
-Das **Calliope mini GameKit** ist eine Erweiterungsplatine, die den Calliope mini (Version 3) in eine vollwertige **Arcade-Konsole** verwandelt. Die Box enthält:
+Das **Calliope GameKit** ist eine Erweiterungsplatine, die den Calliope mini (Version 3) in eine vollwertige **Handheld-Konsole** verwandelt. Die Box enthält:
 
 - Eine **GameKit-Platine** mit Tasten und einem grossen **Farbdisplay**
 - Einen **Batteriehalter** für mobilen Betrieb (3x AAA)
 - Eine Schnellanleitung für den Einstieg
 
-Die Montage ist denkbar einfach: Calliope mini und GameKit werden Rücken an Rücken zusammengesteckt, mit zwei Schrauben gesichert – fertig ist die Spielkonsole. Kinder können diese erste «Hardware-Erfahrung» bereits als Teil des Lernprozesses erleben: Ich baue mein eigenes Gerät zusammen.
+Die Montage ist denkbar einfach: Calliope mini und GameKit werden Rücken an Rücken zusammengesteckt, mit zwei Schrauben gesichert – nur noch Batterien rein und fertig ist die Spielkonsole. Kinder können diese erste «Hardware-Erfahrung» bereits als Teil des Lernprozesses erleben: Ich baue mein eigenes Gerät zusammen.
 
 ## Programmieren mit MakeCode Arcade
 
-Die Programmierung des GameKits erfolgt über **[MakeCode Arcade](https://arcade.makecode.com/)** – eine browserbasierte Entwicklungsumgebung von Microsoft. MakeCode Arcade ist für Einsteiger optimal:
+Die Programmierung des GameKits erfolgt einfach online über **[Microsoft MakeCode Arcade](https://arcade.makecode.com/)** – eine browserbasierte Entwicklungsumgebung von Microsoft. MakeCode Arcade ist für Einsteiger optimal:
 
 - **Blockprogrammierung:** Programmierbefehle werden wie Puzzlestücke zusammengesetzt – kein Tipp-Fehler, keine Syntaxprobleme.
 - **Direkt im Browser testen:** Das Spiel kann sofort im Browser simuliert werden, bevor es auf das GameKit übertragen wird.
@@ -66,12 +67,8 @@ Für Lehrpersonen ist der Einstieg ebenfalls einfach: MakeCode Arcade bietet fer
 
 ## Unser neuer Kurs: «Programmiere dein eigenes Handheld-Spiel»
 
-Bei Wonder Dots haben wir rund um das Calliope mini GameKit einen neuen Kurs entwickelt. Kinder im Primarschulalter bauen ihre Konsole selbst zusammen, lernen die Grundlagen der Blockprogrammierung und entwickeln Schritt für Schritt ihr eigenes Spiel – von der ersten Idee bis zum spielbaren Ergebnis.
+Bei Wonder Dots haben wir rund um das Calliope GameKit einen neuen Kurs entwickelt. Kinder im Primarschulalter bauen ihre Konsole selbst zusammen, lernen die Grundlagen der Blockprogrammierung und entwickeln Schritt für Schritt ihr eigenes Spiel – von der ersten Idee bis zum spielbaren Ergebnis.
 
-Der Kurs eignet sich sowohl für **Einzelkurse und Workshops** als auch für den regulären **Informatikunterricht** in der Schule. Lehrpersonen, die das Material in ihren Unterricht integrieren möchten, können uns direkt kontaktieren.
+Der Kurs eignet sich sowohl für **Einzelkurse, Break-Out Klassen als auch für den regulären Informatikunterricht** in der Schule. Lehrpersonen, die das Material in ihren Unterricht integrieren möchten, können uns gern direkt kontaktieren.
 
 **Interesse?** Mehr Infos zu unserem Kursangebot und den nächsten Terminen findet ihr auf unserer Website – oder schreibt uns einfach.
-
----
-
-*Wonder Dots entwickelt Kurse und Kursmaterialien rund um Computational Thinking, Programmieren und Informatik – speziell für Kinder in der Primarschule und für Schulen, die Informatik in den Unterricht integrieren möchten. Wir sind in der Schweiz tätig und freuen uns über Anfragen von Schulen, Gemeinden und Eltern.*
