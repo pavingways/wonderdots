@@ -9,7 +9,8 @@ const newsCollection = defineCollection({
     title: z.string(),
     snippet: z.string(),
     image: z.object({
-      src: image(),
+      // Accept either a local image (image()) or a remote URL string
+      src: z.union([image(), z.string()]),
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),

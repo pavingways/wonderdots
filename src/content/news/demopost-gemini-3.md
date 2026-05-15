@@ -4,7 +4,7 @@ slug: "programmieren-ohne-bildschirm-unplugged"
 title: "Programmieren ohne Bildschirm: 'Unplugged' in der Primarschule"
 snippet: "Computer Science Unplugged: Entdecke, wie Kinder in der 1. bis 3. Klasse die Grundlagen des Programmierens völlig ohne Computer und Bildschirme lernen."
 image: {
-  src: "https://images.unsplash.com/photo-1760552151024-af859e952fd6?q=50&w=800",
+  src: "./images/photo-1760552151024-af859e952fd6-3.jpg",
   alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2020-01-01 01:01"

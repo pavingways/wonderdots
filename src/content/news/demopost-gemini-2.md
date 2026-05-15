@@ -4,7 +4,7 @@ slug: "die-4-saeulen-des-computational-thinking"
 title: "Die 4 Säulen des Computational Thinking (kinderleicht erklärt!)"
 snippet: "Zerlegung, Mustererkennung, Abstraktion und Algorithmen: Die vier Säulen des Computational Thinking einfach erklärt für Schule und Alltag."
 image: {
-   src: "https://images.unsplash.com/photo-1760552151024-af859e952fd6?q=50&w=800",
+  src: "./images/photo-1760552151024-af859e952fd6-2.jpg",
    alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2020-01-01 01:01"

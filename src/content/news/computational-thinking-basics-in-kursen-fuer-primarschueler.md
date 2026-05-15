@@ -3,7 +3,7 @@ draft: false
 title: "Computational Thinking: Grundlagen für die digitale Zukunft von Kindern"
 snippet: "Von Seymour Paperts Turtle-Programmen bis zu modernen Lernumgebungen: Computational Thinking vermittelt Kindern die Fähigkeit, Probleme kreativ und strukturiert zu lösen. Ein Schlüssel für digitale Mündigkeit."
 image: {
-    src: "https://images.unsplash.com/photo-1689249012292-d4628fc49bd7?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=430&h=240",
+  src: "./images/photo-1689249012292-d4628fc49bd7.jpg",
     alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2025-09-21 11:00"

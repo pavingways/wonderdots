@@ -4,7 +4,7 @@ slug: "von-bloecken-zu-echten-projekten-coden-ab-der-4-klasse"
 title: "Von Blöcken zu echten Projekten: Coden ab der 4. Klasse"
 snippet: "Wie Kinder der Mittelstufe den Sprung vom informatikfreien Spiel zum visuellen Programmieren mit Scratch, Thymio und Co. meistern."
 image: {
-  src: "https://images.unsplash.com/photo-1760552151024-af859e952fd6?q=50&w=800",
+  src: "./images/photo-1760552151024-af859e952fd6-4.jpg",
   alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2020-01-01 01:01"
