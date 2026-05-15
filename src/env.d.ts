@@ -10,6 +10,8 @@ declare module "@lib/*" {
 declare module "@utils/*" {
 	const value: any;
 	export default value;
+	// Known named exports from utility modules (helps TS recognize imports like `import { getFormattedDate } from "@utils/all"`)
+	export const getFormattedDate: any;
 }
 
 declare module "@components/*" {
@@ -43,4 +45,3 @@ declare module "*.svg" {
 	const content: any;
 	export default content;
 }
-
