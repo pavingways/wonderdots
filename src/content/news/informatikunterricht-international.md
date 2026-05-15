@@ -3,7 +3,7 @@ draft: false
 title: "Informatikunterricht weltweit: Erfolgsmodelle und Herausforderungen in der Primarstufe"
 snippet: "Immer mehr Länder integrieren Computational Thinking in die Primarstufe. Was können wir aus internationalen Ansätzen für die informatische Bildung lernen und wie unterstützt Wonder Dots Schulen und Lehrpersonen dabei?"
 image: {
-  src: "/images/news/informatikunterricht.jpg",
+  src: "./images/informatikunterricht.jpg",
   alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2026-04-06 13:00"

@@ -3,7 +3,7 @@ draft: false
 title: "Rückblick: MINT Workshop in Meggen – Kinder programmieren ihre eigenen Videogames!"
 snippet: "Ein eigenes Videogame zu entwickeln, ist kompliziert? Von wegen! Dass das schon in der Primarschule wunderbar funktioniert, hat unser letzter Informatikkurs in Meggen eindrucksvoll bewiesen."
 image: 
-  src: "/images/events/coding-for-kids-1/kinder-programmier-workshop-meggen-luzern.jpg"
+  src: "./images/events/coding-for-kids-1/kinder-programmier-workshop-meggen-luzern.jpg"
   alt: "Kinder beim Videogame-Programmier-Kurs in Meggen, Luzern"
 publishDate: "2026-01-11 12:00"
 category: "Events"
@@ -23,14 +23,14 @@ Den Auftakt machte das Spiel "Schneeballschlacht" in der an der Fachhochschule N
 Die Aufgabe: Einen Roboter sicher durch einen Hagel von Schneebällen steuern. 
 *(Tipp: Scannt unseren QR-Code und probiert das Game direkt selbst aus!)*
 
-![QR Code zum Videogame-Programmier-Kurs für Kinder](/images/events/coding-for-kids-1/kinder-programmier-workshop-meggen-luzern-qr-code.jpg)
+![QR Code zum Videogame-Programmier-Kurs für Kinder](./images/events/coding-for-kids-1/kinder-programmier-workshop-meggen-luzern-qr-code.jpg)
 
 Nach dem Spielen kam die Analyse: Die Kinder stellten schnell fest, dass das Spiel im Hintergrund vor allem aus einfachen Regeln besteht – zum Beispiel: „Wenn der Roboter getroffen wird, verschwindet der Schneeball“ oder „Wenn ich die Pfeiltaste drücke, bewegt sich die Figur“.
 
 Um diese logischen Abläufe des **Programmieren für Kinder** greifbar zu machen, ging es für 30 Minuten nach draussen. 
 Bei einer interaktiven Aktivität im Freien spielten die Kinder das Programmieren physisch nach: Einige übernahmen die "Steuerung", andere waren die "Spielfiguren" (die strikten Regeln folgen mussten) und ein Kind fungierte als Taktgeber, der den Rhythmus für den gesamten Ablauf vorgab. 
 
-![Aussen-Aktivität beim Videogame-Programmier-Kurs für Kinder](/images/events/coding-for-kids-1/kinder-programmier-workshop-meggen-luzern-draussen-aktiv.jpg)
+![Aussen-Aktivität beim Videogame-Programmier-Kurs für Kinder](./images/events/coding-for-kids-1/kinder-programmier-workshop-meggen-luzern-draussen-aktiv.jpg)
 
 So lernten sie [mit Kopf, Herz und Hand - Pestalozzi hätte sein Freude gehabt](https://de.wikipedia.org/wiki/Ganzheitlichkeit_(P%C3%A4dagogik)). 
 

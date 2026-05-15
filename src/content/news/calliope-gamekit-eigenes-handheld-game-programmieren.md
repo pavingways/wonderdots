@@ -3,7 +3,7 @@ draft: false
 title: "Mit dem Calliope GameKit zum eigenen Handheld-Spiel"
 snippet: "Das Calliope GameKit verwandelt einen Mikrocontroller in eine echte Arcade-Konsole. Wie Kinder damit spielend Programmieren lernen, Computational Thinking entwickeln und warum dieses Tool perfekt für den Informatikunterricht in der Primarschule ist."
 image:
-  src: "/images/news/calliope-gamekit-kinder-programmieren.jpg"
+  src: "./images/calliope-gamekit-kinder-programmieren.jpg"
   alt: "Calliope GameKit"
 publishDate: "2026-05-14 09:00"
 category: "Computational Thinking"
