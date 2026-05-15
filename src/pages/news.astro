@@ -4,6 +4,7 @@ import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import { getFormattedDate } from "@utils/all.js";
 
 // Filter news entries with 'draft: false' & date before current date
 const publishedNewsEntries = await getCollection("news", ({ data }) => {
@@ -58,7 +59,7 @@ publishedNewsEntries.sort(function (a, b) {
                       <time
                         class="text-gray-400"
                         datetime={newsPostEntry.data.publishDate.toISOString()}>
-                        {newsPostEntry.data.publishDate.toLocaleDateString("de-CH", {})}
+                        {getFormattedDate(newsPostEntry.data.publishDate)}
                       </time>
                     </div>
                   </div>

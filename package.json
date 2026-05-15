@@ -4,6 +4,10 @@
   "version": "2.2.0",
   "private": true,
   "scripts": {
+    "fetch-content-images": "node ./bin/fetch-content-images.cjs",
+    "predev": "node ./bin/fetch-content-images.cjs || true",
+    "prestart": "node ./bin/fetch-content-images.cjs || true",
+    "prebuild": "node ./bin/fetch-content-images.cjs || true",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",

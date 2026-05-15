@@ -4,7 +4,7 @@ slug: "was-ist-computational-thinking-lehrplan-21"
 title: "Computational Thinking: Grundlagen für die digitale Zukunft von Kindern"
 snippet: "Erfahre, warum Computational Thinking mehr ist als nur Programmieren und wie der Lehrplan 21 die Primarschulen in der Schweiz verändert."
 image: {
-  src: "https://images.unsplash.com/photo-1760552151024-af859e952fd6?q=50&w=800",
+  src: "./images/photo-1760552151024-af859e952fd6-1.jpg",
   alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2020-01-01 01:01"

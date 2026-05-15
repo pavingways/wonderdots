@@ -4,7 +4,7 @@ slug: "fit-fuer-die-zukunft-wie-eltern-und-schulen-gemeinsam-durchstarten"
 title: "Fit für die Zukunft: Wie Eltern und Schulen gemeinsam durchstarten"
 snippet: "Der Abschluss unserer Serie zu Computational Thinking. Wie wir das 'Ich kann kein Mathe/Tech'-Denken durchbrechen und Kinder gemeinsam stark machen."
 image: {
-  src: "https://images.unsplash.com/photo-1760552151024-af859e952fd6?q=50&w=800",
+  src: "./images/photo-1760552151024-af859e952fd6.jpg",
   alt: "Kinder lernen Computational Thinking spielerisch"
 }
 publishDate: "2020-01-01 01:01"

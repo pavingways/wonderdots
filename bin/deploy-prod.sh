@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
 npm run build
 rsync -avr --delete-before  \
   --include=".nojekyll" \
@@ -9,3 +12,5 @@ git add .
 git commit -am "release $(date +'%Y-%m-%d')"
 git push origin main
 cd - || exit
+
+echo "Deployed to https://wonderdots.ch"

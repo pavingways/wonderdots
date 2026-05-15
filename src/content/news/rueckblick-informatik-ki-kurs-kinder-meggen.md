@@ -3,7 +3,7 @@ draft: false
 title: "Rückblick: Videogames für Fortgeschrittene – Zufall und KI in der Primarschule"
 snippet: "Aufbauend auf unserem Einsteiger-Kurs haben ältere Primarschüler in einem 3-tägigen Workshop komplexe Videogames entwickelt. Mit dabei: Echte Künstliche Intelligenz und Zufallsgeneratoren!"
 image: 
-  src: "/images/events/coding-for-kids-2/kinder-programmier-workshop-3-tage-meggen-luzern.jpg"
+  src: "./images/events/coding-for-kids-2/kinder-programmier-workshop-3-tage-meggen-luzern.jpg"
   alt: "MINT Kurs: Primarschüler programmieren Videogames"
 publishDate: "2026-01-12 12:00"
 category: "Events"
