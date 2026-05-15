@@ -15,6 +15,23 @@ const publishedNewsEntries = await getCollection("news", ({ data }) => {
 publishedNewsEntries.sort(function (a, b) {
   return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
 });
+
+// Normalize entries so `image.src` is always a string (helps the `Picture` component typings)
+type RawEntry = (typeof publishedNewsEntries)[number];
+type NormalizedEntry = Omit<RawEntry, "data"> & {
+  data: Omit<RawEntry["data"], "image"> & { image: { src: string; alt: string } };
+};
+
+const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.map((entry) => ({
+  ...entry,
+  data: {
+    ...entry.data,
+    image: {
+      ...entry.data.image,
+      src: typeof entry.data.image.src === "string" ? entry.data.image.src : entry.data.image.src.src,
+    },
+  },
+}));
 ---
 
 <Layout title="News">
@@ -28,7 +45,7 @@ publishedNewsEntries.sort(function (a, b) {
     <main class="mt-16">
       <ul class="grid gap-16 max-w-4xl mx-auto">
         {
-          publishedNewsEntries.map((newsPostEntry, index) => (
+          normalizedPublishedNewsEntries.map((newsPostEntry, index) => (
             <li>
               <a href={`/news/${newsPostEntry.id}`}>
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
