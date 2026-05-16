@@ -14,7 +14,7 @@ tags: [calliope-mini, gamekit, computational-thinking, programmieren-kinder, pri
 Computational Thinking zum Anfassen: 
 Was wäre, wenn Kinder nicht nur Videospiele spielen, sondern sie selbst bauen würden? Genau das ermöglicht das **Calliope GameKit** – und es ist einfacher, zugänglicher und spannender, als die meisten Erwachsenen vermuten würden.
 
-Bei Wonder Dots setzen wir das GameKit in unserem neuen Kurs *«Programmiere dein eigenes Handheld-Spiel»* ein – und die Reaktionen der Kinder sprechen für sich. Doch bevor wir vom Kurs berichten, lohnt es sich, einen Blick auf das Tool selbst zu werfen: Was ist das Calliope GameKit eigentlich – und warum ist es so gut geeignet, um Kindern Informatik und Computational Thinking beizubringen?
+Bei Wonder Dots setzen wir das GameKit in unserem neuen Kurs *«Programmiere dein eigenes Handheld-Spiel»* ein. Doch bevor wir vom Kurs berichten, lohnt es sich, einen Blick auf das Tool selbst zu werfen: Was ist das Calliope GameKit eigentlich – und warum ist es so gut geeignet, um Kindern Informatik und Computational Thinking beizubringen?
 
 ## Was ist der Calliope mini?
 
@@ -71,4 +71,4 @@ Bei Wonder Dots haben wir rund um das Calliope GameKit einen neuen Kurs entwicke
 
 Der Kurs eignet sich sowohl für **Einzelkurse, Break-Out Klassen als auch für den regulären Informatikunterricht** in der Schule. Lehrpersonen, die das Material in ihren Unterricht integrieren möchten, können uns gern direkt kontaktieren.
 
-**Interesse?** Mehr Infos zu unserem Kursangebot und den nächsten Terminen findet ihr auf unserer Website – oder schreibt uns einfach.
+**Interesse?** Mehr Infos zum Kurs und den nächsten Terminen findet ihr demnächst hier auf unserer Website.
