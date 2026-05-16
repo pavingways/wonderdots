@@ -6,7 +6,7 @@ image:
   src: "./images/calliope-gamekit-kinder-programmieren.jpg"
   alt: "Calliope GameKit"
 publishDate: "2026-05-14 09:00"
-category: "Computational Thinking"
+category: "Technologie"
 author: "Wonder Dots"
 tags: [calliope-mini, gamekit, computational-thinking, programmieren-kinder, primarschule, informatik-grundschule, makecode-arcade, handheld-spiel, coding-kinder, mint]
 ---

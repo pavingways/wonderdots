@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
+import contentAssets from "../../.astro/content-assets.mjs";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -22,16 +23,32 @@ type NormalizedEntry = Omit<RawEntry, "data"> & {
   data: Omit<RawEntry["data"], "image"> & { image: { src: string; alt: string } };
 };
 
-const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.map((entry) => ({
-  ...entry,
-  data: {
-    ...entry.data,
-    image: {
-      ...entry.data.image,
-      src: typeof entry.data.image.src === "string" ? entry.data.image.src : entry.data.image.src.src,
+const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.map((entry) => {
+  const image = entry.data.image || {};
+  let resolvedSrc = image.src;
+
+  // Handle content image placeholders like "__ASTRO_IMAGE_./images/xyz.jpg"
+  // by resolving them against the generated content-assets map.
+  if (typeof resolvedSrc === "string" && resolvedSrc.startsWith("__ASTRO_IMAGE_")) {
+    const filePath = resolvedSrc.replace("__ASTRO_IMAGE_", "");
+    const match = Array.from(contentAssets.entries()).find(([k]) => k.startsWith(filePath));
+    if (match) {
+      const imported = match[1];
+      resolvedSrc = imported && typeof imported === "object" && typeof imported.src === "string" ? imported.src : imported;
+    }
+  }
+
+  return {
+    ...entry,
+    data: {
+      ...entry.data,
+      image: {
+        ...image,
+        src: resolvedSrc,
+      },
     },
-  },
-}));
+  };
+});
 ---
 
 <Layout title="News">
@@ -45,20 +62,69 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
     <main class="mt-16">
       <ul class="grid gap-16 max-w-4xl mx-auto">
         {
-          normalizedPublishedNewsEntries.map((newsPostEntry, index) => (
+          normalizedPublishedNewsEntries.map((newsPostEntry, index) => {
+            // Resolve a usable image value for the template.
+            const rawImage = newsPostEntry.data.image;
+            const candidate = rawImage && (rawImage.src ?? rawImage);
+
+            const allowedExt = ["jpg","jpeg","png","tiff","webp","gif","svg","avif"];
+            let usePicture = false;
+            let pictureSrc = candidate;
+
+            if (typeof candidate === "string") {
+              const ext = candidate.split("?")[0].split(".").pop()?.toLowerCase();
+              if (allowedExt.includes(ext)) usePicture = true;
+            } else if (candidate && typeof candidate === "object") {
+              const s = candidate.src ?? candidate.default ?? null;
+              if (typeof s === "string") {
+                const clean = s.split("?")[0];
+                const ext = clean.split(".").pop()?.toLowerCase();
+
+                // Avoid passing raw /@fs/ filesystem paths to `Picture` (not supported).
+                const isFsPath = s.startsWith("/@fs/");
+
+                // Prefer a usable import/default URL when available; otherwise fall back to <img>.
+                if (allowedExt.includes(ext) && !isFsPath) {
+                  usePicture = true;
+                  pictureSrc = candidate.default ?? candidate.src ?? s;
+                } else if (allowedExt.includes(ext) && isFsPath && candidate.default && typeof candidate.default === 'string' && !candidate.default.startsWith('/@fs/')) {
+                  usePicture = true;
+                  pictureSrc = candidate.default;
+                } else {
+                  // Use the string (for <img>) if we can't provide a safe value to Picture
+                  pictureSrc = s;
+                }
+              }
+            }
+
+            return (
             <li>
               <a href={`/news/${newsPostEntry.id}`}>
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={newsPostEntry.data.image.src}
-                    alt={newsPostEntry.data.image.alt}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    width={800}
-                    height={600}
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md object-cover object-center bg-white"
-                  />
+                  {
+                    usePicture
+                      ? (
+                        <Picture
+                          src={pictureSrc}
+                          alt={newsPostEntry.data.image.alt}
+                          sizes="(max-width: 800px) 100vw, 800px"
+                          width={800}
+                          height={600}
+                          loading={index <= 2 ? "eager" : "lazy"}
+                          decoding={index <= 2 ? "sync" : "async"}
+                          class="w-full rounded-md object-cover object-center bg-white"
+                        />
+                      )
+                      : (
+                        <img
+                          src={typeof pictureSrc === 'object' ? (pictureSrc.src ?? pictureSrc.default ?? '') : (pictureSrc ?? '')}
+                          alt={newsPostEntry.data.image.alt}
+                          loading={index <= 2 ? "eager" : "lazy"}
+                          decoding={index <= 2 ? "sync" : "async"}
+                          class="w-full rounded-md object-cover object-center bg-white"
+                        />
+                      )
+                  }
                   <div>
                     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
                       {newsPostEntry.data.category}
@@ -83,7 +149,8 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
                 </div>
               </a>
             </li>
-          ))
+            )
+          })
         }
       </ul>
     </main>
