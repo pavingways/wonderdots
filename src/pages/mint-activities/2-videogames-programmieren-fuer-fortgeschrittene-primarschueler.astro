@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
@@ -15,7 +14,7 @@ import { Picture } from "astro:assets";
     <Sectionhead>
       <Fragment slot="title">Wir bauen Videogames!</Fragment>
       <Fragment slot="desc">
-        Eigene Videogames entwickeln ist easy – das geht schon im Primarschulalter
+        Eigene Videogames entwickeln ist easy - das geht schon im Primarschulalter
       </Fragment>
     </Sectionhead>
 
@@ -36,10 +35,15 @@ import { Picture } from "astro:assets";
       </p>
       <p>
         Die Kinder werden auch hier kreativ und sie lernen auf spielerische Art die Grundlagen der Informatik kennen!
-        Angefangen mit dem Zeichnen eigener Spielfiguren entwickeln sie ihr erstes Videogame – auch hier geht das <strong>ganz ohne Vorkenntnisse</strong>.
+        Angefangen mit dem Zeichnen eigener Spielfiguren entwickeln sie ihr erstes Videogame - auch hier geht das <strong>ganz ohne Vorkenntnisse</strong>.
       </p>
 
-      <ConceptQuote />
+      <blockquote class="text-black border-l-4 border-black pl-4">
+        Wir vermitteln die Konzepte des <a href="/news/computaional-thinking-in-unseren-kursen-fuer-primarschueler/"><strong>Computational Thinking</strong></a>
+        und benutzen dabei die an der <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/ph/institute/institut-primarstufe/professuren-am-ip/professur-informatische-bildung/arbeitsgebiet" rel="nofollow noopener">FHNW</a>
+        entwickelte Lernsoftware <a href="https://ruler.game" rel="nofollow noopener">RULER.game</a>, die - wissenschaftlich fundiert - neue Wege in der Informatischen Bildung ermöglicht.
+      </blockquote>
+
 
       <Link href="/activities/ruler-pacman/flyer-informatik-kurs-primarschule-ruler-serie-11.pdf" appearance="unstyled" target="_blank">
         <Picture

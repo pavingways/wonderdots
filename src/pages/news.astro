@@ -44,7 +44,7 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
       ...entry.data,
       image: {
         ...image,
-        src: resolvedSrc,
+        src: resolvedSrc as any,
       },
     },
   };
@@ -65,17 +65,18 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
           normalizedPublishedNewsEntries.map((newsPostEntry, index) => {
             // Resolve a usable image value for the template.
             const rawImage = newsPostEntry.data.image;
-            const candidate = rawImage && (rawImage.src ?? rawImage);
+            const candidate = rawImage && ((rawImage as any).src ?? rawImage);
 
             const allowedExt = ["jpg","jpeg","png","tiff","webp","gif","svg","avif"];
             let usePicture = false;
-            let pictureSrc = candidate;
+            let pictureSrc: any = candidate;
 
             if (typeof candidate === "string") {
               const ext = candidate.split("?")[0].split(".").pop()?.toLowerCase() || "";
               if (allowedExt.includes(ext)) usePicture = true;
             } else if (candidate && typeof candidate === "object") {
-              const s = candidate.src ?? candidate.default ?? null;
+              const candObj = candidate as any;
+              const s = candObj.src ?? candObj.default ?? null;
               if (typeof s === "string") {
                 const clean = s.split("?")[0];
                 const ext = clean.split(".").pop()?.toLowerCase() || "";
@@ -86,10 +87,10 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
                 // Prefer a usable import/default URL when available; otherwise fall back to <img>.
                 if (allowedExt.includes(ext) && !isFsPath) {
                   usePicture = true;
-                  pictureSrc = candidate.default ?? candidate.src ?? s;
-                } else if (allowedExt.includes(ext) && isFsPath && candidate.default && typeof candidate.default === 'string' && !candidate.default.startsWith('/@fs/')) {
+                  pictureSrc = candObj.default ?? candObj.src ?? s;
+                } else if (allowedExt.includes(ext) && isFsPath && candObj.default && typeof candObj.default === 'string' && !candObj.default.startsWith('/@fs/')) {
                   usePicture = true;
-                  pictureSrc = candidate.default;
+                  pictureSrc = candObj.default;
                 } else {
                   // Use the string (for <img>) if we can't provide a safe value to Picture
                   pictureSrc = s;
@@ -117,7 +118,7 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
                       )
                       : (
                         <img
-                          src={typeof pictureSrc === 'object' ? (pictureSrc.src ?? pictureSrc.default ?? '') : (pictureSrc ?? '')}
+                          src={typeof pictureSrc === 'object' ? ((pictureSrc as any).src ?? (pictureSrc as any).default ?? '') : (pictureSrc ?? '')}
                           alt={newsPostEntry.data.image.alt}
                           loading={index <= 2 ? "eager" : "lazy"}
                           decoding={index <= 2 ? "sync" : "async"}
