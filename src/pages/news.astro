@@ -72,13 +72,13 @@ const normalizedPublishedNewsEntries: NormalizedEntry[] = publishedNewsEntries.m
             let pictureSrc = candidate;
 
             if (typeof candidate === "string") {
-              const ext = candidate.split("?")[0].split(".").pop()?.toLowerCase();
+              const ext = candidate.split("?")[0].split(".").pop()?.toLowerCase() || "";
               if (allowedExt.includes(ext)) usePicture = true;
             } else if (candidate && typeof candidate === "object") {
               const s = candidate.src ?? candidate.default ?? null;
               if (typeof s === "string") {
                 const clean = s.split("?")[0];
-                const ext = clean.split(".").pop()?.toLowerCase();
+                const ext = clean.split(".").pop()?.toLowerCase() || "";
 
                 // Avoid passing raw /@fs/ filesystem paths to `Picture` (not supported).
                 const isFsPath = s.startsWith("/@fs/");
